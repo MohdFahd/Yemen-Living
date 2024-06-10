@@ -1,3 +1,24 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+  font-family: "RobotoSlab-Light";
+  font-style: normal;
+  font-weight: 700;
+  src: url("./assets/fonts/RobotoSlab-Light.ttf") format("opentype");
+  /* Corrected format */
+}
+@font-face {
+  font-family: "RobotoSlab-Medium";
+  font-style: normal;
+  font-weight: 700;
+  src: url("./assets/fonts/RobotoSlab-Medium.ttf") format("opentype");
+  /* Corrected format */
+}
+body {
+  font-family: "RobotoSlab-Light";
+}
+.bold {
+  font-family: "RobotoSlab-Medium" !important;
+}
