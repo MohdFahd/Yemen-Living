@@ -1,12 +1,14 @@
 <template>
-  <div class="self-start pt-52 relative">
+  <div
+    class="self-start md:pt-52 max-md:pt-10 relative max-md:flex max-md:justify-center max-md:items-center max-md:flex-col"
+  >
     <svg
       width="183"
       height="171"
       viewBox="0 0 183 171"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
-      class="absolute -z-50 top-32"
+      class="absolute -z-50 top-32 max-md:hidden"
     >
       <path
         opacity="0.7"
@@ -17,19 +19,21 @@
       />
     </svg>
 
-    <p class="text-5xl max-w-2xl z-30">
-      <span class="bold">Yemen Living</span>
+    <p class="md:text-5xl max-w-2xl z-30 max-md:text-xl max-md:text-center">
+      <span class="bold max-md:text-3xl">Yemen Living</span>
       Convenience in shopping Quality in products and diversity in brands...
     </p>
+    <Button />
   </div>
-  <div class="flex justify-end relative overflow-hidden">
-    <vector class="absolute top-20 z-0" />
+  <div class="flex justify-end max-md:justify-center relative overflow-hidden">
+    <vector class="absolute top-20 z-0 max-md:w-[300px] max-md:h-[200px]" />
     <img src="../assets/imgs/hero.webp" class="z-10" width="60%" alt="" />
   </div>
 </template>
 
 <script setup>
 import vector from "../components/svg/vector.vue";
+import Button from "./Button.vue";
 </script>
 
 <style></style>

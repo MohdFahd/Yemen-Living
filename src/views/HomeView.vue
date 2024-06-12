@@ -3,11 +3,11 @@
     <NavBar />
     <section
       id="hero"
-      class="flex justify-between items-center mt-5 relative z-10"
+      class="flex justify-between items-center md:mt-5 md:relative z-10 max-md:flex-col"
     >
       <hero />
       <div
-        class="absolute inset-x-0 top-96 w-full h-20 bg-pattern -translate-y-full"
+        class="absolute inset-x-0 top-96 w-full h-20 bg-pattern -translate-y-full max-md:top-0"
       >
         <svg
           width="533"
@@ -15,6 +15,7 @@
           viewBox="0 0 533 1553"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
+          class="w-[533px] h-1[1553px] max-md:w-[300px] max-md:h-[1153px] left-0"
         >
           <path
             d="M364.662 916.995C158.658 1017.37 -173.186 1161.88 -148.665 879.028C-117.46 519.083 386.685 260.219 59.1151 224.81"
