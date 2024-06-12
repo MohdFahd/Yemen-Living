@@ -1,5 +1,7 @@
 <template>
-  <div class="flex justify-between items-center">
+  <div
+    class="container mx-auto px-10 max-md:px-5 flex justify-between items-center"
+  >
     <div class="flex flex-col">
       <ButtonIcon title="+967 777 777 777" parentClass="text-black flex my-2 ">
         <img src="../assets/icons/phone.svg" alt=""
@@ -24,8 +26,8 @@
       <logo />
     </div>
   </div>
-  <hr class="my-5" />
-  <div class="flex justify-between">
+  <hr class="container mx-auto px-10 max-md:px-5 my-5" />
+  <div class="container mx-auto px-10 max-md:px-5 flex justify-between">
     <div class="flex items-center">
       <span class="bold">Powered by: </span>
       <svg

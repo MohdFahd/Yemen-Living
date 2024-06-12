@@ -1,35 +1,46 @@
 <template>
-  <section id="Features" class="mt-5">
-    <h1 class="bold text-center text-3xl">Yemen Living Features</h1>
-    <div class="grid grid-cols-3 justify-between items-center mt-16">
-      <div class="flex justify-between z-50">
-        <radioTap :tabs="Features" @update="handleUpdate" />
-        <div>
-          <ul class="bg-[#83868B] h-[33vh] w-1 rounded-lg ml-64">
-            <li
-              id="current-slide-indicator"
-              class="bg-[#D9D9D9] rounded-xl"
-              style="height: 5vh"
-            ></li>
-          </ul>
+  <section id="Features" class="mt-5 bg-[#FDFDFD]">
+    <div class="container mx-auto px-10 max-md:px-5 py-5">
+      <h1 class="bold text-center text-3xl max-md:text-xl">
+        Yemen Living Features
+      </h1>
+      <div
+        class="grid grid-cols-3 justify-between items-center mt-16 max-md:grid-cols-1"
+      >
+        <div class="flex justify-between z-50 max-md:items-center text-center">
+          <radioTap :tabs="Features" @update="handleUpdate" />
+          <h3 class="bold text-lg text-center w-full md:hidden">
+            {{ selectedFeature.tap }}
+          </h3>
+          <div class="max-md:hidden">
+            <ul class="bg-[#83868B] h-[33vh] w-1 rounded-lg ml-64">
+              <li
+                id="current-slide-indicator"
+                class="bg-[#D9D9D9] rounded-xl"
+                style="height: 5vh"
+              ></li>
+            </ul>
+          </div>
         </div>
-      </div>
-      <div class="relative flex justify-center items-center">
-        <div class="absolute z-0">
-          <vector class="w-[350px] h-[250px]" />
+        <div class="relative flex justify-center items-center max-md:my-5">
+          <div class="absolute z-0">
+            <vector class="w-[330px] h-[250px] max-md:w-[250px]" />
+          </div>
+          <transition name="slide-fade">
+            <img
+              :src="selectedFeature.img"
+              class="z-10 OnAppear"
+              width="50%"
+              alt=""
+              :key="selectedFeature.img"
+            />
+          </transition>
         </div>
-        <transition name="slide-fade">
-          <img
-            :src="selectedFeature.img"
-            class="z-10 OnAppear"
-            width="50%"
-            alt=""
-            :key="selectedFeature.img"
-          />
-        </transition>
-      </div>
-      <div class="text-xl bold w-64 ml-10">
-        <h2>{{ selectedFeature.title }}</h2>
+        <div
+          class="text-xl bold w-full md:ml-10 max-md:text-center max-md:flex max-md:justify-center"
+        >
+          <h2 class="w-64">{{ selectedFeature.title }}</h2>
+        </div>
       </div>
     </div>
   </section>

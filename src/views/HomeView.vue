@@ -1,11 +1,12 @@
 <template>
   <div>
     <NavBar />
-    <section
-      id="hero"
-      class="flex justify-between items-center md:mt-5 md:relative z-10 max-md:flex-col"
-    >
-      <hero />
+    <section id="hero" class="md:mt-5">
+      <div
+        class="container mx-auto px-10 max-md:px-5 flex justify-between items-center md:relative z-10 max-md:flex-col"
+      >
+        <hero />
+      </div>
       <div
         class="absolute inset-x-0 top-96 w-full h-20 bg-pattern -translate-y-full max-md:top-0"
       >
@@ -49,7 +50,7 @@
       </div>
     </section>
     <Features />
-    <div class="mt-5">
+    <div class="mt-5 container mx-auto px-10 max-md:px-0">
       <patten />
     </div>
     <section
@@ -98,7 +99,7 @@
         >
           <ButtonIcon
             title="Download for IOS"
-            parentClass="bg-[#345A8A] text-white text-center rounded-xl flex bg-white w-72 p-4 mt-6 bold cursor-pointer"
+            parentClass="bg-[#345A8A] text-white text-center rounded-xl flex  w-72 p-4 mt-6 bold cursor-pointer"
           >
             <img src="../assets/icons/ios.svg" alt=""
           /></ButtonIcon>
@@ -110,7 +111,7 @@
         </card>
       </div>
     </section>
-    <div class="mt-5">
+    <div class="mt-5 container mx-auto px-10 max-md:px-0">
       <patten />
     </div>
     <Footer />

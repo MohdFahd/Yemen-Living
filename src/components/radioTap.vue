@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div v-for="(tab, index) in tabs" :key="index" class="flex">
+    <div v-for="(tab, index) in tabs" :key="index" class="flex max-md:hidden">
       <input
         type="radio"
         class="border-2 border-gray-500 rounded-lg p-2 m-2"
