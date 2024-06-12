@@ -1,11 +1,11 @@
 <template>
   <svg
-    width="1440"
-    height="131"
+    width="100%"
+    height="100%"
     viewBox="0 0 1440 131"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
-    class="max-md:hidden"
+    class=""
   >
     <g opacity="0.03" clip-path="url(#clip0_81_2475)">
       <path
@@ -628,7 +628,7 @@
       </clipPath>
     </defs>
   </svg>
-  <svg
+  <!-- <svg
     width="412"
     height="118"
     viewBox="0 0 412 118"
@@ -864,7 +864,7 @@
       d="M239.874 4.72881C241.291 4.72881 242.393 3.74581 242.393 2.48196C242.393 1.21811 241.291 0.235107 239.874 0.235107C238.458 0.235107 237.356 1.21811 237.356 2.48196C237.356 3.60539 238.458 4.72881 239.874 4.72881Z"
       fill="#191919"
     />
-  </svg>
+  </svg> -->
 </template>
 
 <script setup></script>

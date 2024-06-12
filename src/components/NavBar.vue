@@ -3,12 +3,12 @@
     <div
       class="flex justify-between items-center mt-5 max-md:hidden container mx-auto px-10"
     >
-      <Logo :phone="false" />
+      <Logo logo="header" />
       <NavLinks />
       <Button />
     </div>
     <div class="container mx-auto px-5 flex justify-between mt-5 md:hidden">
-      <Logo :phone="true" />
+      <Logo logo="phone" />
       <icon name="menu" />
     </div>
   </div>

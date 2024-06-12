@@ -1,7 +1,7 @@
 <template>
   <div
     :class="[
-      'w-[520px] rounded-tl-[20px] rounded-[20px] p-6 !pb-0 mx-20',
+      'w-[520px] max-md:max-w-[350px]  max-[1023px]:mb-5 rounded-tl-[20px] rounded-[20px] p-6 !pb-0 mx-20',
       parentClass,
     ]"
   >

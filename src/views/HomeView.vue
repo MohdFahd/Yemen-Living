@@ -3,7 +3,7 @@
     <NavBar />
     <section id="hero" class="md:mt-5">
       <div
-        class="container mx-auto px-10 max-md:px-5 flex justify-between items-center md:relative z-10 max-md:flex-col"
+        class="container mx-auto px-10 max-md:px-5 flex justify-between items-center md:relative z-10 max-[1023px]:flex-col max-[1023px]:justify-center max-[1023px]:items-center"
       >
         <hero />
       </div>
@@ -50,38 +50,44 @@
       </div>
     </section>
     <Features />
-    <div class="mt-5 container mx-auto px-10 max-md:px-0">
+    <div class="mt-5">
       <patten />
     </div>
     <section
       id="Brands"
-      class="mt-5 text-center flex flex-col justify-center items-center"
+      class="container mx-auto px-10 max-md:px-5 mt-5 text-center flex flex-col justify-center items-center"
     >
       <div class="w-full flex justify-center text-center">
-        <h2 class="bold text-center w-full text-3xl max-w-xs">
+        <h2 class="bold text-center w-full text-3xl max-md:text-2xl max-w-xs">
           We works best with your favorite platform
         </h2>
       </div>
-      <p class="text-zinc-500 text-base font-medium leading-10">
+      <p
+        class="text-zinc-500 text-base max-md:text-[14px] font-medium leading-10"
+      >
         Join over 4000 businesses worldwide
       </p>
       <div class="flex justify-center items-center"></div>
-      <div class="flex justify-center flex-wrap w-1/2 relative">
+      <div
+        class="relative grid grid-cols-6 max-md:grid-cols-4 justify-items-center gap-4"
+      >
         <div class="absolute z-0 top-10">
           <vectorSmall />
         </div>
         <div
           v-for="(brand, index) in brands"
           :key="index"
-          class="w-20 h-20 bg-white rounded-md shadow mx-4 mt-5 p-2 z-10"
+          class="w-20 h-20 max-md:w-16 max-md:h-16 bg-white rounded-md shadow mt-5 p-2 mx-auto z-10 flex justify-center items-center"
         >
           <img :src="brand.src" alt="" class="" />
         </div>
       </div>
     </section>
-    <section id="Download" class="mt-5">
-      <h1 class="bold text-center text-3xl my-16">Download Yemen Living App</h1>
-      <div class="flex justify-center items-center">
+    <section id="Download" class="container mx-auto px-10 max-md:px-5 mt-5">
+      <h1 class="bold text-center text-3xl my-16 max-md:text-xl">
+        Download Yemen Living App
+      </h1>
+      <div class="flex justify-center items-center max-[1023px]:flex-col">
         <card title="Android" Desc="Download app for Android today - it's free">
           <ButtonIcon title="Download for Android">
             <img src="../assets/icons/google-play.svg" alt=""
@@ -111,7 +117,7 @@
         </card>
       </div>
     </section>
-    <div class="mt-5 container mx-auto px-10 max-md:px-0">
+    <div class="mt-5">
       <patten />
     </div>
     <Footer />
@@ -164,5 +170,3 @@ const brands = [
   },
 ];
 </script>
-
-<style></style>

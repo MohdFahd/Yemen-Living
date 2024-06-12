@@ -19,14 +19,20 @@
       />
     </svg>
 
-    <p class="md:text-5xl max-w-2xl z-30 max-md:text-xl max-md:text-center">
+    <p class="md:text-5xl max-w-5xl z-30 max-md:text-xl max-md:text-center">
       <span class="bold max-md:text-3xl">Yemen Living</span>
       Convenience in shopping Quality in products and diversity in brands...
     </p>
-    <Button />
+    <div class="md:hidden">
+      <Button />
+    </div>
   </div>
-  <div class="flex justify-end max-md:justify-center relative overflow-hidden">
-    <vector class="absolute top-20 z-0 max-md:w-[300px] max-md:h-[200px]" />
+  <div
+    class="flex justify-end max-[1023px]:justify-center relative overflow-hidden"
+  >
+    <vector
+      class="absolute top-20 z-0 max-[1023px]:w-[300px] max-[1023px]:h-[200px]"
+    />
     <img src="../assets/imgs/hero.webp" class="z-10" width="60%" alt="" />
   </div>
 </template>

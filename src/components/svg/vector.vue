@@ -20,7 +20,7 @@ import { defineProps } from "vue";
 const props = defineProps({
   className: {
     type: String,
-    default: "w-[571px] h-[462px]",
+    default: "w-[60%]",
   },
 });
 </script>

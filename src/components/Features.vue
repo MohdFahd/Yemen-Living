@@ -12,7 +12,7 @@
           <h3 class="bold text-lg text-center w-full md:hidden">
             {{ selectedFeature.tap }}
           </h3>
-          <div class="max-md:hidden">
+          <!-- <div class="max-[1023px]:hidden ">
             <ul class="bg-[#83868B] h-[33vh] w-1 rounded-lg ml-64">
               <li
                 id="current-slide-indicator"
@@ -20,11 +20,11 @@
                 style="height: 5vh"
               ></li>
             </ul>
-          </div>
+          </div> -->
         </div>
         <div class="relative flex justify-center items-center max-md:my-5">
           <div class="absolute z-0">
-            <vector class="w-[330px] h-[250px] max-md:w-[250px]" />
+            <vector class="w-[100%]" />
           </div>
           <transition name="slide-fade">
             <img
@@ -89,7 +89,7 @@ const handleUpdate = (tab) => {
 </script>
 <style scoped>
 /* Transition for entering (new image) */
-.slide-fade-enter-active {
+/* .slide-fade-enter-active {
   transition: transform 1s ease-in-out, opacity 1s ease-in-out;
 }
 .slide-fade-enter {
@@ -102,15 +102,14 @@ const handleUpdate = (tab) => {
 }
 
 /*Transition for leaving (old image) */
-.slide-fade-leave-active {
+/* .slide-fade-leave-active {
   transition: transform 1s ease-in-out, opacity 0.3s ease-in-out;
   position: absolute;
 }
 .slide-fade-leave-to {
   transform: translateX(-100%) rotate(-90deg);
   opacity: 0;
-}
-
+} */
 .OnAppear {
   animation: slideInAndRotate 2s ease-out forwards;
 }

@@ -1,6 +1,6 @@
 <template>
   <div
-    class="container mx-auto px-10 max-md:px-5 flex justify-between items-center"
+    class="container mx-auto px-10 max-md:px-5 flex justify-between items-center mt-4"
   >
     <div class="flex flex-col">
       <ButtonIcon title="+967 777 777 777" parentClass="text-black flex my-2 ">
@@ -16,20 +16,28 @@
         <img src="../assets/icons/privacy.svg" alt=""
       /></ButtonIcon>
     </div>
-    <div class="flex">
+    <div class="flex max-md:hidden">
       <img src="../assets/icons/youtube.svg" class="mx-3" alt="" />
       <img src="../assets/icons/x.svg" class="mx-3" alt="" />
       <img src="../assets/icons/instgram.svg" class="mx-3" alt="" />
       <img src="../assets/icons/facebook.svg" class="mx-3" alt="" />
     </div>
     <div class="flex">
-      <logo />
+      <Logo logo="footer" />
     </div>
   </div>
+  <div class="flex justify-center my-3 md:hidden">
+    <img src="../assets/icons/youtube.svg" class="mx-3" alt="" />
+    <img src="../assets/icons/x.svg" class="mx-3" alt="" />
+    <img src="../assets/icons/instgram.svg" class="mx-3" alt="" />
+    <img src="../assets/icons/facebook.svg" class="mx-3" alt="" />
+  </div>
   <hr class="container mx-auto px-10 max-md:px-5 my-5" />
-  <div class="container mx-auto px-10 max-md:px-5 flex justify-between">
+  <div
+    class="container mx-auto px-10 max-md:px-5 flex justify-between max-md:flex-col-reverse max-md:justify-center max-md:items-center"
+  >
     <div class="flex items-center">
-      <span class="bold">Powered by: </span>
+      <span class="bold max-md:text-xs">Powered by: </span>
       <svg
         width="76"
         height="33"
@@ -63,13 +71,15 @@
         </defs>
       </svg>
     </div>
-    <p class="bold">&copy; All rights reserved to Yemen living {{ date }}</p>
+    <p class="bold max-md:text-xs mb-3">
+      &copy; All rights reserved to Yemen living {{ date }}
+    </p>
   </div>
 </template>
 
 <script setup>
 import ButtonIcon from "../components/ButtonIcon.vue";
-import logo from "../components/logo.vue";
+import Logo from "../components/logo.vue";
 
 const date = new Date().getFullYear();
 </script>
