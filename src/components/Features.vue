@@ -2,15 +2,17 @@
   <section id="Features" class="mt-5">
     <h1 class="bold text-center text-3xl">Yemen Living Features</h1>
     <div class="grid grid-cols-3 justify-between items-center mt-16">
-      <div class="flex">
+      <div class="flex justify-between z-50">
         <radioTap :tabs="Features" @update="handleUpdate" />
-        <ul class="bg-[#83868B] h-[33vh] w-1 rounded-lg ml-64">
-          <li
-            id="current-slide-indicator"
-            class="bg-[#D9D9D9] rounded-xl"
-            style="height: 5vh"
-          ></li>
-        </ul>
+        <div>
+          <ul class="bg-[#83868B] h-[33vh] w-1 rounded-lg ml-64">
+            <li
+              id="current-slide-indicator"
+              class="bg-[#D9D9D9] rounded-xl"
+              style="height: 5vh"
+            ></li>
+          </ul>
+        </div>
       </div>
       <div class="relative flex justify-center items-center">
         <div class="absolute z-0">

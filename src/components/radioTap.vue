@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div v-for="(tab, index) in tabs" :key="index">
+    <div v-for="(tab, index) in tabs" :key="index" class="flex">
       <input
         type="radio"
         class="border-2 border-gray-500 rounded-lg p-2 m-2"
@@ -10,7 +10,10 @@
         :value="tab.tap"
         @change="updateSelection(tab)"
       />
-      <label :for="tab.tap" class="mx-2">{{ tab.tap }}</label
+      <label
+        :for="tab.tap"
+        class="mx-2 cursor-pointer bold hover:text-blue-500"
+        >{{ tab.tap }}</label
       ><br />
     </div>
   </div>
