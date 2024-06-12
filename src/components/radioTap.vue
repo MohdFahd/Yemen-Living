@@ -1,29 +1,30 @@
 <template>
   <div>
-    <div v-for="(value, key) in options" :key="key">
+    <div v-for="(tab, index) in tabs" :key="index">
       <input
         type="radio"
         class="border-2 border-gray-500 rounded-lg p-2 m-2"
-        :id="key"
+        :id="tab.tap"
         v-model="selected"
         :name="groupName"
-        :value="value"
+        :value="tab.tap"
+        @change="updateSelection(tab)"
       />
-      <label :for="key" class="mx-2">{{ key }}</label
+      <label :for="tab.tap" class="mx-2">{{ tab.tap }}</label
       ><br />
     </div>
   </div>
 </template>
-<script setup>
-import { ref } from "vue";
 
-// Define your options object
-const options = {
-  YemeniPremium: "Yemeni Premium",
-  ForHome: "For home ",
-  EasyPayment: "Easy payment",
-  OrderTracing: "Order Tracing",
-  shipWorldwide: "ship worldwide",
+<script setup>
+import { ref, defineProps, defineEmits } from "vue";
+const props = defineProps({
+  tabs: Array,
+});
+const emit = defineEmits(["update"]);
+const updateSelection = (tab) => {
+  emit("update", tab);
 };
-const selected = ref(options.YemeniPremium);
+const selected = ref(props.tabs[0]?.tap || ""); // Default to the first tab if available
+const groupName = "featureTabs"; // Group name for the radio buttons
 </script>

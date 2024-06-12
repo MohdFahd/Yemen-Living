@@ -1,6 +1,23 @@
 <template>
-  <div class="self-start pt-52">
-    <p class="text-5xl max-w-2xl">
+  <div class="self-start pt-52 relative">
+    <svg
+      width="183"
+      height="171"
+      viewBox="0 0 183 171"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      class="absolute -z-50 top-32"
+    >
+      <path
+        opacity="0.7"
+        fill-rule="evenodd"
+        clip-rule="evenodd"
+        d="M90.969 170.967C116.02 171.891 136.012 153.233 152.282 134.095C169.482 113.863 188.134 90.0431 181.7 64.2447C175.348 38.7809 146.945 28.8756 123.26 17.7369C100.05 6.82182 75.6274 -5.99747 51.6458 3.08276C25.5024 12.9815 3.99807 36.4699 0.357296 64.2719C-3.02048 90.0656 18.2398 109.974 35.0552 129.774C50.834 148.353 66.6596 170.071 90.969 170.967Z"
+        fill="#EEEEEE"
+      />
+    </svg>
+
+    <p class="text-5xl max-w-2xl z-30">
       <span class="bold">Yemen Living</span>
       Convenience in shopping Quality in products and diversity in brands...
     </p>
