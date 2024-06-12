@@ -24,22 +24,29 @@
         </div>
         <div class="relative flex justify-center items-center max-md:my-5">
           <div class="absolute z-0">
-            <vector class="w-[100%]" />
+            <vector />
           </div>
-          <transition name="slide-fade">
+          <transition name="slide-fade" mode="out-in">
             <img
               :src="selectedFeature.img"
-              class="z-10 OnAppear"
+              class="z-10"
               width="50%"
               alt=""
               :key="selectedFeature.img"
             />
           </transition>
         </div>
+
         <div
           class="text-xl bold w-full md:ml-10 max-md:text-center max-md:flex max-md:justify-center"
         >
-          <h2 class="w-64">{{ selectedFeature.title }}</h2>
+          <h2
+            class="w-64"
+            v-if="selectedFeature.title"
+            :key="selectedFeature.title"
+          >
+            {{ selectedFeature.title }}
+          </h2>
         </div>
       </div>
     </div>
@@ -57,22 +64,22 @@ const Features = ref([
     tap: "YemeniPremium",
   },
   {
-    title: "Yemeni Premium for home easy for Devloping",
+    title: "Yemeni Premium for home easy for Developing",
     img: "src/assets/imgs/Features/ph2.png",
     tap: "ForHome",
   },
   {
-    title: "Yemeni Premium for home easy login",
+    title: "Yemeni Premium for login",
     img: "src/assets/imgs/Features/ph3.png",
     tap: "EasyPayment",
   },
   {
-    title: "Yemeni Premium for home easy login",
+    title: "Yemeni Premium for home Yemeni Premium ",
     img: "src/assets/imgs/Features/ph4.png",
     tap: "OrderTracing",
   },
   {
-    title: "Yemeni Premium for home easy login",
+    title: "Yemeni Premium for home easy  home easy",
     img: "src/assets/imgs/Features/ph5.png",
     tap: "shipWorldwide",
   },
@@ -88,44 +95,52 @@ const handleUpdate = (tab) => {
 };
 </script>
 <style scoped>
-/* Transition for entering (new image) */
-/* .slide-fade-enter-active {
-  transition: transform 1s ease-in-out, opacity 1s ease-in-out;
-}
-.slide-fade-enter {
-  transform: translateX(100%) rotate(90deg);
-  opacity: 0;
-}
-.slide-fade-enter-to {
-  transform: translateX(0) rotate(0deg);
-  opacity: 1;
-}
-
-/*Transition for leaving (old image) */
-/* .slide-fade-leave-active {
-  transition: transform 1s ease-in-out, opacity 0.3s ease-in-out;
-  position: absolute;
-}
-.slide-fade-leave-to {
-  transform: translateX(-100%) rotate(-90deg);
-  opacity: 0;
-} */
-.OnAppear {
-  animation: slideInAndRotate 2s ease-out forwards;
-}
-
-@keyframes slideInAndRotate {
+@keyframes slide-in-right {
   0% {
-    transform: translateX(30%) rotate(90deg);
-    opacity: 1;
+    transform: translateX(100%) rotate(30deg);
+    opacity: 0;
   }
   50% {
-    transform: translate(0%, -10%) rotate(-45deg);
-    opacity: 1;
+    opacity: 0.5;
   }
   100% {
     transform: translateX(0) rotate(0deg);
     opacity: 1;
   }
+}
+
+@keyframes slide-out-left {
+  0% {
+    transform: translateX(0) rotate(0deg);
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(-100%) rotate(-30deg);
+    opacity: 0;
+  }
+}
+
+.slide-fade-enter-active {
+  animation: slide-in-right 0.5s both;
+}
+
+.slide-fade-leave-active {
+  animation: slide-out-left 0.5s both;
+}
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+.fade-enter, .fade-leave-to /* .fade-leave-active in <2.1.8 */ {
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+  transform: translateY(-30px);
+}
+.fade-enter-to,
+.fade-leave {
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+  transform: translateY(0);
 }
 </style>

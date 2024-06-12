@@ -30,9 +30,7 @@
   <div
     class="flex justify-end max-[1023px]:justify-center relative overflow-hidden"
   >
-    <vector
-      class="absolute top-20 z-0 max-[1023px]:w-[300px] max-[1023px]:h-[200px]"
-    />
+    <vector class="absolute top-20 z-0 w-[60%]" />
     <img src="../assets/imgs/hero.webp" class="z-10" width="60%" alt="" />
   </div>
 </template>
