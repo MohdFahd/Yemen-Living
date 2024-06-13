@@ -1,5 +1,5 @@
 <template>
-  <div :class="['', parentClass]">
+  <div :class="['rounded-xl flex w-72 mt-6 bold cursor-pointer', parentClass]">
     <slot />
 
     <span class="mx-3">{{ title }}</span>
@@ -11,7 +11,7 @@ defineProps({
   title: String,
   parentClass: {
     type: String,
-    default: "rounded-xl flex bg-white w-72 p-4 mt-6 bold cursor-pointer", // Default class if none is provided
+    default: "", // Default class if none is provided
   },
 });
 </script>

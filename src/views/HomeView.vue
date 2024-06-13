@@ -49,12 +49,13 @@
         </svg>
       </div>
     </section>
-    <Features />
+    <Features id="Features" />
     <div class="mt-5">
       <patten />
     </div>
     <section
       id="Brands"
+      ref="brandSection"
       class="container mx-auto px-10 max-md:px-5 mt-5 text-center flex flex-col justify-center items-center"
     >
       <div class="w-full flex justify-center text-center">
@@ -83,38 +84,55 @@
         </div>
       </div>
     </section>
-    <section id="Download" class="container mx-auto px-10 max-md:px-5 mt-5">
-      <h1 class="bold text-center text-3xl my-16 max-md:text-xl">
+    <section
+      id="Download"
+      ref="download"
+      class="container mx-auto px-10 max-md:px-5 mt-5"
+    >
+      <h1
+        class="bold text-center text-3xl my-16 max-md:text-xl"
+        ref="downloadTitle"
+      >
         Download Yemen Living App
       </h1>
       <div class="flex justify-center items-center max-[1023px]:flex-col">
-        <card title="Android" Desc="Download app for Android today - it's free">
-          <ButtonIcon title="Download for Android">
-            <img src="../assets/icons/google-play.svg" alt=""
-          /></ButtonIcon>
-          <img
-            src="../assets/imgs/Andriod.webp"
-            class="overflow-hidden mt-5"
-            alt=""
-          />
-        </card>
-        <card
-          title="IOS"
-          Desc="Download app for Android today - it's free"
-          parentClass="bg-[#E5F3FF]"
-        >
-          <ButtonIcon
-            title="Download for IOS"
-            parentClass="bg-[#345A8A] text-white text-center rounded-xl flex  w-72 p-4 mt-6 bold cursor-pointer"
+        <div ref="downloadCard1">
+          <card
+            title="Android"
+            Desc="Download app for Android today - it's free"
           >
-            <img src="../assets/icons/ios.svg" alt=""
-          /></ButtonIcon>
-          <img
-            src="../assets/imgs/iPhone.webp"
-            class="overflow-hidden mt-5"
-            alt=""
-          />
-        </card>
+            <ButtonIcon
+              title="Download for Android"
+              parentClass="hover:bg-gray-500 hover:text-white bg-white p-4 mt-6"
+            >
+              <img src="../assets/icons/google-play.svg" alt=""
+            /></ButtonIcon>
+            <img
+              src="../assets/imgs/Andriod.webp"
+              class="overflow-hidden mt-5"
+              alt=""
+            />
+          </card>
+        </div>
+        <div ref="downloadCard2">
+          <card
+            title="IOS"
+            Desc="Download app for Android today - it's free"
+            parentClass="bg-[#E5F3FF]"
+          >
+            <ButtonIcon
+              title="Download for IOS"
+              parentClass="bg-[#345A8A] text-white text-center rounded-xl flex  w-72 p-4 mt-6 bold cursor-pointer hover:bg-black hover:text-white "
+            >
+              <img src="../assets/icons/ios.svg" alt=""
+            /></ButtonIcon>
+            <img
+              src="../assets/imgs/iPhone.webp"
+              class="overflow-hidden mt-5"
+              alt=""
+            />
+          </card>
+        </div>
       </div>
     </section>
     <div class="mt-5">
@@ -130,43 +148,113 @@ import vector from "../components/svg/vector.vue";
 import patten from "../components/svg/patten.vue";
 import NavBar from "../components/NavBar.vue";
 import Footer from "../components/Footer.vue";
-
 import Features from "../components/Features.vue";
-
 import hero from "../components/hero.vue";
 import card from "../components/card.vue";
 import ButtonIcon from "../components/ButtonIcon.vue";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { onMounted, ref } from "vue";
 
 const brands = [
   {
-    src: "/src/assets/imgs/brands/1.png",
+    src: "/YemenLiving/src/assets/imgs/brands/1.png",
   },
   {
-    src: "/src/assets/imgs/brands/1.png",
+    src: "/YemenLiving/src/assets/imgs/brands/1.png",
   },
   {
-    src: "/src/assets/imgs/brands/1.png",
+    src: "/YemenLiving/src/assets/imgs/brands/1.png",
   },
   {
-    src: "/src/assets/imgs/brands/1.png",
+    src: "/YemenLiving/src/assets/imgs/brands/1.png",
   },
   {
-    src: "/src/assets/imgs/brands/1.png",
+    src: "/YemenLiving/src/assets/imgs/brands/1.png",
   },
   {
-    src: "/src/assets/imgs/brands/1.png",
+    src: "/YemenLiving/src/assets/imgs/brands/1.png",
   },
   {
-    src: "/src/assets/imgs/brands/1.png",
+    src: "/YemenLiving/src/assets/imgs/brands/1.png",
   },
   {
-    src: "/src/assets/imgs/brands/1.png",
+    src: "/YemenLiving/src/assets/imgs/brands/1.png",
   },
   {
-    src: "/src/assets/imgs/brands/1.png",
+    src: "/YemenLiving/src/assets/imgs/brands/1.png",
   },
   {
-    src: "/src/assets/imgs/brands/1.png",
+    src: "/YemenLiving/src/assets/imgs/brands/1.png",
   },
 ];
+const brandSection = ref(null);
+const download = ref(null);
+const downloadTitle = ref(null);
+const downloadCard1 = ref(null);
+const downloadCard2 = ref(null);
+onMounted(() => {
+  gsap.fromTo(
+    brandSection.value,
+    { y: 300 },
+    {
+      y: 0,
+      duration: 1.5,
+      ease: "power1.inOut",
+      scrollTrigger: {
+        // scroller: "cont",
+        trigger: "#Features",
+        start: "top top",
+        toggleActions: "play none none reset",
+      },
+    }
+  );
+  gsap.fromTo(
+    downloadTitle.value,
+    { y: 300 },
+    {
+      y: 0,
+      duration: 1.5,
+      ease: "power1.inOut",
+      scrollTrigger: {
+        // scroller: "cont",
+        trigger: "#Features",
+        start: "top top",
+        toggleActions: "play none none reset",
+      },
+    }
+  );
+  gsap.fromTo(
+    downloadCard1.value,
+    { x: -300, opacity: 0 },
+    {
+      x: 0,
+      opacity: 1,
+      duration: 1.5,
+      ease: "power1.inOut",
+      scrollTrigger: {
+        // scroller: "cont",
+        trigger: "#Brands",
+        start: "top bottom",
+        toggleActions: "play none none reset",
+      },
+    }
+  );
+  gsap.fromTo(
+    downloadCard2.value,
+    { x: 300, opacity: 0 },
+    {
+      x: 0,
+      opacity: 1,
+      duration: 1.5,
+      ease: "power1.inOut",
+      scrollTrigger: {
+        // scroller: "cont",
+        trigger: "#Brands",
+        start: "top bottom",
+        toggleActions: "play none none reset",
+      },
+    }
+  );
+});
 </script>

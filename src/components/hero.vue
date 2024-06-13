@@ -31,7 +31,7 @@
     </div>
   </div>
   <div
-    class="flex justify-end max-[1023px]:justify-center relative overflow-hidden"
+    class="flex justify-end max-[1023px]:justify-center relative overflow-hidden max-md:mt-16"
     ref="image"
   >
     <vector class="absolute top-20 z-0 w-[60%]" />

@@ -114,9 +114,10 @@ const thirdDiv = ref(null);
 onMounted(() => {
   gsap.fromTo(
     title.value,
-    { y: 300 },
+    { y: 100, opacity: 0 },
     {
       y: 0,
+      opacity: 1,
       duration: 1.5,
       ease: "power1.inOut",
       scrollTrigger: {
@@ -129,9 +130,10 @@ onMounted(() => {
   );
   gsap.fromTo(
     firstDiv.value,
-    { x: -500 },
+    { x: -100, opacity: 0 },
     {
       x: 0,
+      opacity: 1,
       duration: 2.5,
       ease: "power1.out",
       scrollTrigger: {
@@ -144,9 +146,10 @@ onMounted(() => {
   );
   gsap.fromTo(
     secondDiv.value,
-    { scale: 0.5 },
+    { scale: 0.5, opacity: 0 },
     {
-      scale: 1.5,
+      scale: 1,
+      opacity: 1,
       duration: 3.5,
       ease: "power1.out",
       scrollTrigger: {
@@ -160,24 +163,13 @@ onMounted(() => {
     }
   );
 
-  // Animation for the second div (zoom out)
-  // gsap.from(secondDiv.value, {
-  //   scale: 0.5, // Initial scale
-  //   opacity: 0,
-  //   scrollTrigger: {
-  //     trigger: secondDiv.value,
-  //     start: "top bottom",
-  //     end: "bottom top",
-  //     scrub: true,
-  //   },
-  // });
-
   // Animation for the third div (come from the left)
   gsap.fromTo(
     thirdDiv.value,
-    { x: 500 },
+    { x: 100, opacity: 0 },
     {
       x: 0,
+      opacity: 1,
       duration: 2.5,
       ease: "power1.out",
       scrollTrigger: {
