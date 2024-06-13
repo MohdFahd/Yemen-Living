@@ -53,86 +53,130 @@
     <div class="mt-5">
       <patten />
     </div>
-    <section
-      id="Brands"
-      ref="brandSection"
-      class="container mx-auto px-10 max-md:px-5 mt-5 text-center flex flex-col justify-center items-center"
-    >
-      <div class="w-full flex justify-center text-center">
-        <h2 class="bold text-center w-full text-3xl max-md:text-2xl max-w-xs">
-          We works best with your favorite platform
-        </h2>
-      </div>
-      <p
-        class="text-zinc-500 text-base max-md:text-[14px] font-medium leading-10"
+    <section id="Brands" ref="brandSection" class="mt-5 relative">
+      <svg
+        width="617"
+        height="1553"
+        viewBox="0 0 617 1553"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+        class="absolute top-0 left-0"
       >
-        Join over 4000 businesses worldwide
-      </p>
-      <div class="flex justify-center items-center"></div>
+        <path
+          d="M448.662 916.995C242.658 1017.37 -89.1861 1161.88 -64.6649 879.028C-33.46 519.083 470.685 260.219 143.115 224.81"
+          stroke="#E1E1E1"
+        />
+        <path
+          d="M367.885 911.249C161.881 1011.63 -169.963 1156.13 -145.442 873.282C-114.237 513.337 389.907 254.473 62.3377 219.064"
+          stroke="#E1E1E1"
+        />
+        <path
+          d="M286.901 910.511C80.8977 1010.89 -250.947 1155.39 -226.426 872.544C-195.221 512.599 308.924 253.735 -18.6457 218.326"
+          stroke="#E1E1E1"
+        />
+        <path
+          d="M206.096 915.885C0.0930294 1016.26 -331.752 1160.77 -307.23 877.918C-276.025 517.973 228.119 259.109 -99.4504 223.7"
+          stroke="#E1E1E1"
+        />
+        <path
+          d="M126.104 928.579C-79.8992 1028.96 -411.744 1173.46 -387.223 890.612C-356.018 530.667 148.127 271.803 -179.443 236.394"
+          stroke="#E1E1E1"
+        />
+        <path
+          d="M47.8836 949.563C-158.12 1049.94 -489.964 1194.44 -465.443 911.596C-434.238 551.651 69.9062 292.787 -257.663 257.378"
+          stroke="#E1E1E1"
+        />
+        <path
+          d="M-27.4553 979.251C-233.459 1079.63 -565.303 1224.13 -540.782 941.284C-509.577 581.339 -5.43267 322.475 -333.002 287.066"
+          stroke="#E1E1E1"
+        />
+        <path
+          d="M-99.0403 1017.13C-305.044 1117.51 -636.888 1262.01 -612.367 979.166C-581.162 619.221 -77.0176 360.357 -404.587 324.948"
+          stroke="#E1E1E1"
+        />
+        <path
+          d="M-166.55 1061.86C-372.553 1162.24 -704.398 1306.74 -679.877 1023.89C-648.672 663.95 -144.527 405.086 -472.097 369.677"
+          stroke="#E1E1E1"
+        />
+      </svg>
+
       <div
-        class="relative grid grid-cols-6 max-md:grid-cols-4 justify-items-center gap-4"
+        class="container mx-auto px-10 max-md:px-5 text-center flex flex-col justify-center items-center py-24"
       >
-        <div class="absolute z-0 top-10">
-          <!-- Assuming vectorSmall is a component or SVG, adjust as necessary -->
-          <vectorSmall />
+        <div class="w-full flex justify-center text-center">
+          <h2 class="bold text-center w-full text-3xl max-md:text-2xl max-w-xs">
+            We works best with your favorite platform
+          </h2>
         </div>
-        <div
-          v-for="(brand, index) in brands"
-          :key="index"
-          class="mx-auto w-20 h-20 max-md:w-16 max-md:h-16 bg-white rounded-md shadow mt-5 p-2 z-10 flex justify-center items-center"
+        <p
+          class="text-zinc-500 text-base max-md:text-[14px] font-medium leading-10"
         >
-          <img :src="brand.src" alt="" class="" />
+          Join over 4000 businesses worldwide
+        </p>
+        <div class="flex justify-center items-center"></div>
+        <div
+          class="relative grid grid-cols-6 max-md:grid-cols-4 justify-items-center gap-4"
+        >
+          <div class="absolute z-0 top-10">
+            <!-- Assuming vectorSmall is a component or SVG, adjust as necessary -->
+            <vectorSmall />
+          </div>
+          <div
+            v-for="(brand, index) in brands"
+            :key="index"
+            class="mx-auto w-20 h-20 max-md:w-16 max-md:h-16 bg-white rounded-md shadow mt-5 p-2 z-10 flex justify-center items-center"
+          >
+            <img :src="brand.src" alt="" class="" />
+          </div>
         </div>
       </div>
     </section>
-    <section
-      id="Download"
-      ref="download"
-      class="container mx-auto px-10 max-md:px-5 mt-5"
-    >
-      <h1
-        class="bold text-center text-3xl my-16 max-md:text-xl"
-        ref="downloadTitle"
-      >
-        Download Yemen Living App
-      </h1>
-      <div class="flex justify-center items-center max-[1023px]:flex-col">
-        <div ref="downloadCard1">
-          <card
-            title="Android"
-            Desc="Download app for Android today - it's free"
-          >
-            <ButtonIcon
-              title="Download for Android"
-              parentClass="hover:bg-gray-500 hover:text-white bg-white p-4 mt-6"
+    <section id="Download" ref="download" class="mt-5 bg-[#FDFDFD] p-5">
+      <div class="container mx-auto px-10 max-md:px-5">
+        <h1
+          class="bold text-center text-3xl my-16 max-md:text-xl"
+          ref="downloadTitle"
+        >
+          Download Yemen Living App
+        </h1>
+        <div class="flex justify-center items-center max-[1023px]:flex-col">
+          <div ref="downloadCard1">
+            <card
+              title="Android"
+              Desc="Download app for Android today - it's free"
             >
-              <img src="../assets/icons/google-play.svg" alt=""
-            /></ButtonIcon>
-            <img
-              src="../assets/imgs/Andriod.webp"
-              class="overflow-hidden mt-5"
-              alt=""
-            />
-          </card>
-        </div>
-        <div ref="downloadCard2">
-          <card
-            title="IOS"
-            Desc="Download app for Android today - it's free"
-            parentClass="bg-[#E5F3FF]"
-          >
-            <ButtonIcon
-              title="Download for IOS"
-              parentClass="bg-[#345A8A] text-white text-center rounded-xl flex  w-72 p-4 mt-6 bold cursor-pointer hover:bg-black hover:text-white "
+              <ButtonIcon
+                title="Download for Android"
+                parentClass="hover:bg-gray-500 hover:text-white bg-white p-4 mt-6"
+              >
+                <img src="../assets/icons/google-play.svg" alt=""
+              /></ButtonIcon>
+              <img
+                src="../assets/imgs/Andriod.webp"
+                class="overflow-hidden mt-5"
+                alt=""
+              />
+            </card>
+          </div>
+          <div ref="downloadCard2">
+            <card
+              title="IOS"
+              Desc="Download app for Android today - it's free"
+              parentClass="bg-[#E5F3FF]"
             >
-              <img src="../assets/icons/ios.svg" alt=""
-            /></ButtonIcon>
-            <img
-              src="../assets/imgs/iPhone.webp"
-              class="overflow-hidden mt-5"
-              alt=""
-            />
-          </card>
+              <ButtonIcon
+                title="Download for IOS"
+                parentClass="bg-[#345A8A] text-white text-center rounded-xl flex  w-72 p-4 mt-6 bold cursor-pointer hover:bg-black hover:text-white "
+              >
+                <img src="../assets/icons/ios.svg" alt=""
+              /></ButtonIcon>
+              <img
+                src="../assets/imgs/iPhone.webp"
+                class="overflow-hidden mt-5"
+                alt=""
+              />
+            </card>
+          </div>
         </div>
       </div>
     </section>
