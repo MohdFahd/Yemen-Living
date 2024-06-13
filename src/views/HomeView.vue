@@ -159,34 +159,34 @@ import { onMounted, ref } from "vue";
 
 const brands = [
   {
-    src: "public/brands/1.png",
+    src: "/YemenLiving/brands/1.png",
   },
   {
-    src: "public/brands/2.png",
+    src: "/YemenLiving/brands/2.png",
   },
   {
-    src: "public/brands/3.png",
+    src: "/YemenLiving/brands/3.png",
   },
   {
-    src: "public/brands/4.png",
+    src: "/YemenLiving/brands/4.png",
   },
   {
-    src: "public/brands/5.png",
+    src: "/YemenLiving/brands/5.png",
   },
   {
-    src: "public/brands/6.png",
+    src: "/YemenLiving/brands/6.png",
   },
   {
-    src: "public/brands/7.png",
+    src: "/YemenLiving/brands/7.png",
   },
   {
-    src: "public/brands/8.png",
+    src: "/YemenLiving/brands/8.png",
   },
   {
-    src: "public/brands/9.png",
+    src: "/YemenLiving/brands/9.png",
   },
   {
-    src: "public/brands/10.png",
+    src: "/YemenLiving/brands/10.png",
   },
 ];
 const brandSection = ref(null);
