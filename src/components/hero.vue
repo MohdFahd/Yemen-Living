@@ -69,9 +69,11 @@ onMounted(() => {
 </script>
 
 <style scoped>
-.crical {
-  animation: rotate 15s linear infinite;
-  display: inline-block;
+@media (min-width: 768px) {
+  .crical {
+    animation: rotate 15s linear infinite;
+    display: inline-block;
+  }
 }
 
 @keyframes rotate {
