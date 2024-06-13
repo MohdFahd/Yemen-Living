@@ -5,29 +5,41 @@
         type="radio"
         class="border-2 border-gray-500 rounded-lg p-2 m-2"
         :id="tab.tap"
-        v-model="selected"
+        :checked="selected === index"
         :name="groupName"
-        :value="tab.tap"
         @change="updateSelection(tab)"
       />
       <label
         :for="tab.tap"
         class="mx-2 cursor-pointer bold hover:text-blue-500"
         >{{ tab.tap }}</label
-      ><br />
+      >
+      <br />
     </div>
   </div>
 </template>
 
 <script setup>
-import { ref, defineProps, defineEmits } from "vue";
+import { ref, defineProps, defineEmits, onMounted } from "vue";
+
 const props = defineProps({
   tabs: Array,
 });
+
 const emit = defineEmits(["update"]);
+const selected = ref(0); // Start with the first tab
+const groupName = "featureTabs"; // Group name for the radio buttons
+
+// Method to update selection and emit to parent
 const updateSelection = (tab) => {
   emit("update", tab);
 };
-const selected = ref(props.tabs[0]?.tap || ""); // Default to the first tab if available
-const groupName = "featureTabs"; // Group name for the radio buttons
+
+// Auto switch tabs every 2 seconds
+onMounted(() => {
+  setInterval(() => {
+    selected.value = (selected.value + 1) % props.tabs.length;
+    updateSelection(props.tabs[selected.value]); // Emit the updated tab to parent
+  }, 3000);
+});
 </script>

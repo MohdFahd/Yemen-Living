@@ -12,9 +12,11 @@
           ref="firstDiv"
         >
           <radioTap :tabs="Features" @update="handleUpdate" />
-          <h3 class="bold text-lg text-center w-full md:hidden">
-            {{ selectedFeature.tap }}
-          </h3>
+          <transition name="fade">
+            <h3 class="bold text-lg text-center w-full md:hidden">
+              {{ selectedFeature.tap }}
+            </h3>
+          </transition>
           <!-- <div class="max-[1023px]:hidden ">
             <ul class="bg-[#83868B] h-[33vh] w-1 rounded-lg ml-64">
               <li
@@ -146,7 +148,7 @@ onMounted(() => {
   );
   gsap.fromTo(
     secondDiv.value,
-    { scale: 0.5, opacity: 0 },
+    { scale: 0.5 },
     {
       scale: 1,
       opacity: 1,
@@ -219,18 +221,5 @@ onMounted(() => {
 
 .slide-fade-leave-active {
   animation: slide-out-left 0.5s both;
-}
-.fade-enter-active,
-.fade-leave-active {
-  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
-}
-.fade-enter, .fade-leave-to /* .fade-leave-active in <2.1.8 */ {
-  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
-  transform: translateY(-30px);
-}
-.fade-enter-to,
-.fade-leave {
-  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
-  transform: translateY(0);
 }
 </style>
