@@ -37,7 +37,7 @@
           <transition name="slide-fade" mode="out-in">
             <img
               :src="selectedFeature.img"
-              class="z-10"
+              class="z-10 md:w-[70%] max-md:w-[90%]"
               width="50%"
               alt=""
               :key="selectedFeature.img"
