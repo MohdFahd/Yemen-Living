@@ -73,12 +73,13 @@
         class="relative grid grid-cols-6 max-md:grid-cols-4 justify-items-center gap-4"
       >
         <div class="absolute z-0 top-10">
+          <!-- Assuming vectorSmall is a component or SVG, adjust as necessary -->
           <vectorSmall />
         </div>
         <div
           v-for="(brand, index) in brands"
           :key="index"
-          class="w-20 h-20 max-md:w-16 max-md:h-16 bg-white rounded-md shadow mt-5 p-2 mx-auto z-10 flex justify-center items-center"
+          class="mx-auto w-20 h-20 max-md:w-16 max-md:h-16 bg-white rounded-md shadow mt-5 p-2 z-10 flex justify-center items-center"
         >
           <img :src="brand.src" alt="" class="" />
         </div>
@@ -158,34 +159,34 @@ import { onMounted, ref } from "vue";
 
 const brands = [
   {
-    src: "/YemenLiving/src/assets/imgs/brands/1.png",
+    src: "public/brands/1.png",
   },
   {
-    src: "/YemenLiving/src/assets/imgs/brands/1.png",
+    src: "public/brands/2.png",
   },
   {
-    src: "/YemenLiving/src/assets/imgs/brands/1.png",
+    src: "public/brands/3.png",
   },
   {
-    src: "/YemenLiving/src/assets/imgs/brands/1.png",
+    src: "public/brands/4.png",
   },
   {
-    src: "/YemenLiving/src/assets/imgs/brands/1.png",
+    src: "public/brands/5.png",
   },
   {
-    src: "/YemenLiving/src/assets/imgs/brands/1.png",
+    src: "public/brands/6.png",
   },
   {
-    src: "/YemenLiving/src/assets/imgs/brands/1.png",
+    src: "public/brands/7.png",
   },
   {
-    src: "/YemenLiving/src/assets/imgs/brands/1.png",
+    src: "public/brands/8.png",
   },
   {
-    src: "/YemenLiving/src/assets/imgs/brands/1.png",
+    src: "public/brands/9.png",
   },
   {
-    src: "/YemenLiving/src/assets/imgs/brands/1.png",
+    src: "public/brands/10.png",
   },
 ];
 const brandSection = ref(null);
@@ -258,3 +259,4 @@ onMounted(() => {
   );
 });
 </script>
+<style scoped></style>
