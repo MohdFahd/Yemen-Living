@@ -60,27 +60,27 @@ import vector from "../components/svg/vector.vue";
 const Features = ref([
   {
     title: "Yemeni Premium for home easy login",
-    img: "src/assets/imgs/Features/ph1.png",
+    img: "/YemenLiving/src/assets/imgs/Features/ph1.png",
     tap: "YemeniPremium",
   },
   {
     title: "Yemeni Premium for home easy for Developing",
-    img: "src/assets/imgs/Features/ph2.png",
+    img: "/YemenLiving/src/assets/imgs/Features/ph2.png",
     tap: "ForHome",
   },
   {
     title: "Yemeni Premium for login",
-    img: "src/assets/imgs/Features/ph3.png",
+    img: "/YemenLiving/src/assets/imgs/Features/ph3.png",
     tap: "EasyPayment",
   },
   {
     title: "Yemeni Premium for home Yemeni Premium ",
-    img: "src/assets/imgs/Features/ph4.png",
+    img: "/YemenLiving/src/assets/imgs/Features/ph4.png",
     tap: "OrderTracing",
   },
   {
     title: "Yemeni Premium for home easy  home easy",
-    img: "src/assets/imgs/Features/ph5.png",
+    img: "/YemenLiving/src/assets/imgs/Features/ph5.png",
     tap: "shipWorldwide",
   },
 ]);

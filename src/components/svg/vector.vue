@@ -15,12 +15,27 @@
   </svg>
 </template>
 <script setup>
-import { defineProps } from "vue";
+import { defineProps, ref } from "vue";
 
 const props = defineProps({
   className: {
     type: String,
-    default: "w-[100%] max-md:w-[100%]",
+    default: "w-[100%] max-md:w-[100%] crical",
   },
 });
 </script>
+<style scoped>
+.crical {
+  animation: rotate 10s linear infinite;
+  display: inline-block;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+</style>

@@ -8,7 +8,7 @@
       viewBox="0 0 183 171"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
-      class="absolute -z-50 top-32 max-md:hidden"
+      class="absolute -z-50 top-32 max-md:hidden crical"
     >
       <path
         opacity="0.7"
@@ -19,7 +19,10 @@
       />
     </svg>
 
-    <p class="md:text-5xl max-w-5xl z-30 max-md:text-xl max-md:text-center">
+    <p
+      class="md:text-5xl max-w-5xl z-30 max-md:text-xl max-md:text-center"
+      ref="textDiv"
+    >
       <span class="bold max-md:text-3xl">Yemen Living</span>
       Convenience in shopping Quality in products and diversity in brands...
     </p>
@@ -29,6 +32,7 @@
   </div>
   <div
     class="flex justify-end max-[1023px]:justify-center relative overflow-hidden"
+    ref="image"
   >
     <vector class="absolute top-20 z-0 w-[60%]" />
     <img src="../assets/imgs/hero.webp" class="z-10" width="60%" alt="" />
@@ -36,8 +40,46 @@
 </template>
 
 <script setup>
+import { onMounted, ref } from "vue";
+import { gsap } from "gsap";
 import vector from "../components/svg/vector.vue";
 import Button from "./Button.vue";
+
+const textDiv = ref(null);
+const image = ref(null);
+
+onMounted(() => {
+  gsap.from(textDiv.value, {
+    x: -200, // Adjust the value as needed
+    opacity: 0,
+    duration: 2.5,
+    ease: "back.out",
+  });
+
+  gsap.from(image.value, {
+    x: 500, // Adjust the value as needed
+    y: 200,
+    opacity: 0,
+    rotation: 45,
+    duration: 2.5,
+    ease: "back.out",
+  });
+});
+//animate ".box" from an opacity of 0 to an opacity of 0.5
 </script>
 
-<style></style>
+<style scoped>
+.crical {
+  animation: rotate 10s linear infinite;
+  display: inline-block;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+</style>
