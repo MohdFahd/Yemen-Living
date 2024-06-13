@@ -70,7 +70,7 @@ onMounted(() => {
 
 <style scoped>
 .crical {
-  animation: rotate 10s linear infinite;
+  animation: rotate 15s linear infinite;
   display: inline-block;
 }
 

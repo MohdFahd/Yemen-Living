@@ -1,13 +1,16 @@
 <template>
-  <section id="Features" class="mt-5 bg-[#FDFDFD]">
+  <section id="Features" class="mt-5 bg-[#FDFDFD] cont p-10" ref="container">
     <div class="container mx-auto px-10 max-md:px-5 py-5">
-      <h1 class="bold text-center text-3xl max-md:text-xl">
+      <h1 class="bold text-center text-3xl max-md:text-xl" ref="title">
         Yemen Living Features
       </h1>
       <div
-        class="grid grid-cols-3 justify-between items-center mt-16 max-md:grid-cols-1"
+        class="grid grid-cols-3 justify-between items-center mt-16 max-md:grid-cols-1 futuresContainer"
       >
-        <div class="flex justify-between z-50 max-md:items-center text-center">
+        <div
+          class="flex justify-between z-50 max-md:items-center text-center"
+          ref="firstDiv"
+        >
           <radioTap :tabs="Features" @update="handleUpdate" />
           <h3 class="bold text-lg text-center w-full md:hidden">
             {{ selectedFeature.tap }}
@@ -22,7 +25,10 @@
             </ul>
           </div> -->
         </div>
-        <div class="relative flex justify-center items-center max-md:my-5">
+        <div
+          class="relative flex justify-center items-center max-md:my-5 h-[500px]"
+          ref="secondDiv"
+        >
           <div class="absolute z-0">
             <vector />
           </div>
@@ -39,6 +45,7 @@
 
         <div
           class="text-xl bold w-full md:ml-10 max-md:text-center max-md:flex max-md:justify-center"
+          ref="thirdDiv"
         >
           <h2
             class="w-64"
@@ -53,9 +60,11 @@
   </section>
 </template>
 <script setup>
-import { ref } from "vue";
+import { onMounted, ref } from "vue";
 import radioTap from "../components/radioTap.vue";
 import vector from "../components/svg/vector.vue";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 const Features = ref([
   {
@@ -93,7 +102,96 @@ const handleUpdate = (tab) => {
     selectedFeature.value = feature;
   }
 };
+
+// Gsap Animation
+gsap.registerPlugin(ScrollTrigger);
+const container = ref(null);
+const title = ref(null);
+const firstDiv = ref(null);
+const secondDiv = ref(null);
+const thirdDiv = ref(null);
+
+onMounted(() => {
+  gsap.fromTo(
+    title.value,
+    { y: 300 },
+    {
+      y: 0,
+      duration: 1.5,
+      ease: "power1.inOut",
+      scrollTrigger: {
+        // scroller: "cont",
+        trigger: "cont",
+        start: "top top ",
+        toggleActions: "play none none reset",
+      },
+    }
+  );
+  gsap.fromTo(
+    firstDiv.value,
+    { x: -500 },
+    {
+      x: 0,
+      duration: 2.5,
+      ease: "power1.out",
+      scrollTrigger: {
+        trigger: container.value,
+        start: "top 50%",
+        end: "bottom top",
+        toggleActions: "play none none reset",
+      },
+    }
+  );
+  gsap.fromTo(
+    secondDiv.value,
+    { scale: 0.5 },
+    {
+      scale: 1.5,
+      duration: 3.5,
+      ease: "power1.out",
+      scrollTrigger: {
+        trigger: container.value,
+        start: "top 50%",
+        end: "bottom top",
+        toggleActions: "play none none reset",
+        // markers: true,
+        scrub: true,
+      },
+    }
+  );
+
+  // Animation for the second div (zoom out)
+  // gsap.from(secondDiv.value, {
+  //   scale: 0.5, // Initial scale
+  //   opacity: 0,
+  //   scrollTrigger: {
+  //     trigger: secondDiv.value,
+  //     start: "top bottom",
+  //     end: "bottom top",
+  //     scrub: true,
+  //   },
+  // });
+
+  // Animation for the third div (come from the left)
+  gsap.fromTo(
+    thirdDiv.value,
+    { x: 500 },
+    {
+      x: 0,
+      duration: 2.5,
+      ease: "power1.out",
+      scrollTrigger: {
+        trigger: container.value,
+        start: "top 50%",
+        end: "bottom top",
+        toggleActions: "play none none reset",
+        // markers: true,
+      },
+    }
+  );
+});
 </script>
+
 <style scoped>
 @keyframes slide-in-right {
   0% {
