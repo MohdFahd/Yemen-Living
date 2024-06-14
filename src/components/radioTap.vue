@@ -40,6 +40,6 @@ onMounted(() => {
   setInterval(() => {
     selected.value = (selected.value + 1) % props.tabs.length;
     updateSelection(props.tabs[selected.value]); // Emit the updated tab to parent
-  }, 3000);
+  }, 4500);
 });
 </script>

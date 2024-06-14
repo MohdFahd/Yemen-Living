@@ -2,7 +2,7 @@
   <div
     class="container mx-auto px-10 max-md:px-5 flex justify-between items-center mt-4"
   >
-    <div class="flex flex-col">
+    <div class="flex flex-col w-full">
       <ButtonIcon title="+967 777 777 777" parentClass="text-black flex my-2 ">
         <img src="../assets/icons/phone.svg" alt=""
       /></ButtonIcon>
@@ -16,13 +16,13 @@
         <img src="../assets/icons/privacy.svg" alt=""
       /></ButtonIcon>
     </div>
-    <div class="flex max-md:hidden">
+    <div class="flex max-md:hidden w-full justify-center">
       <img src="../assets/icons/youtube.svg" class="mx-3" alt="" />
       <img src="../assets/icons/x.svg" class="mx-3" alt="" />
       <img src="../assets/icons/instgram.svg" class="mx-3" alt="" />
       <img src="../assets/icons/facebook.svg" class="mx-3" alt="" />
     </div>
-    <div class="flex">
+    <div class="flex w-full justify-end">
       <Logo logo="footer" />
     </div>
   </div>
@@ -34,7 +34,7 @@
   </div>
   <hr class="container mx-auto px-10 max-md:px-5 my-5" />
   <div
-    class="container mx-auto px-10 max-md:px-5 flex justify-between max-md:flex-col-reverse max-md:justify-center max-md:items-center"
+    class="container mx-auto px-10 max-md:px-5 flex justify-between max-md:flex-col-reverse max-md:justify-center max-md:items-center my-4"
   >
     <div class="flex items-center">
       <span class="bold max-md:text-xs">Powered by: </span>

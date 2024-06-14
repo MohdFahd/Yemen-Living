@@ -71,27 +71,27 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 const Features = ref([
   {
     title: "Yemeni Premium for home easy login",
-    img: "public/Features/ph1.webp",
+    img: "./Features/ph1.webp",
     tap: "YemeniPremium",
   },
   {
     title: "Yemeni Premium for home easy for Developing",
-    img: "public/Features/ph2.webp",
+    img: "./Features/ph2.webp",
     tap: "ForHome",
   },
   {
     title: "Yemeni Premium for login",
-    img: "public/Features/ph3.webp",
+    img: "./Features/ph3.webp",
     tap: "EasyPayment",
   },
   {
     title: "Yemeni Premium for home Yemeni Premium ",
-    img: "public/Features/ph4.webp",
+    img: "./Features/ph4.webp",
     tap: "OrderTracing",
   },
   {
     title: "Yemeni Premium for home easy  home easy",
-    img: "public/Features/ph5.webp",
+    img: "./Features/ph5.webp",
     tap: "shipWorldwide",
   },
 ]);
