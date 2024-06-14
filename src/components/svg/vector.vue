@@ -20,7 +20,7 @@ import { defineProps, ref } from "vue";
 const props = defineProps({
   className: {
     type: String,
-    default: "w-[100%] max-md:w-[60%] crical",
+    default: "w-[80%] max-md:w-[60%] crical",
   },
 });
 </script>

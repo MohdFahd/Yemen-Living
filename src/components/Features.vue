@@ -32,7 +32,7 @@
           ref="secondDiv"
         >
           <div class="absolute z-0">
-            <vector />
+            <vector pa />
           </div>
           <transition name="slide-fade" mode="out-in">
             <img
