@@ -21,7 +21,7 @@
 
   <svg
     v-else-if="logo == 'header'"
-    width="181"
+    width="130"
     height="67"
     viewBox="0 0 181 67"
     fill="none"

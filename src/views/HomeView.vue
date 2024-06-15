@@ -124,7 +124,7 @@
           <div
             v-for="(brand, index) in brands"
             :key="index"
-            class="mx-4 w-20 h-20 max-md:w-16 max-md:h-16 bg-white rounded-md shadow mt-5 p-2 z-10 flex justify-center items-center"
+            class="mx-4 w-20 h-20 max-md:w-16 max-md:h-16 bg-white cursor-pointer rounded-md shadow mt-5 p-2 z-10 flex justify-center items-center brand-card"
           >
             <img :src="brand.src" alt="" class="" />
           </div>
@@ -303,4 +303,30 @@ onMounted(() => {
   );
 });
 </script>
-<style scoped></style>
+<style scoped>
+.brand-card {
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+.brand-card:hover {
+  transform: scale(1.1);
+  /* opacity: 0.9; */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Example of keyframe animation */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.brand-card {
+  animation: fadeIn 0.5s ease-in-out;
+}
+</style>
