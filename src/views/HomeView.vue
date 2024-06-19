@@ -248,24 +248,27 @@ onMounted(() => {
       ease: "power1.inOut",
       scrollTrigger: {
         // scroller: "cont",
-        trigger: "#Features",
-        start: "top top",
+        trigger: brandSection.value,
+        start: "top bottom",
+
         toggleActions: "play none none reset",
       },
     }
   );
   gsap.fromTo(
     downloadTitle.value,
-    { y: 300 },
+    { y: 100, opacity: 0 },
     {
+      opacity: 1,
       y: 0,
       duration: 1.5,
       ease: "power1.inOut",
       scrollTrigger: {
         // scroller: "cont",
-        trigger: "#Features",
-        start: "top top",
+        trigger: downloadTitle.value,
+        start: "top bottom",
         toggleActions: "play none none reset",
+        markers: true,
       },
     }
   );
@@ -275,12 +278,12 @@ onMounted(() => {
     {
       x: 0,
       opacity: 1,
-      duration: 1.5,
+      duration: 2,
       ease: "power1.inOut",
       scrollTrigger: {
         // scroller: "cont",
-        trigger: "#Brands",
-        start: "top bottom",
+        trigger: downloadCard1.value,
+        start: "top 80%",
         toggleActions: "play none none reset",
       },
     }
@@ -291,12 +294,12 @@ onMounted(() => {
     {
       x: 0,
       opacity: 1,
-      duration: 1.5,
+      duration: 2,
       ease: "power1.inOut",
       scrollTrigger: {
         // scroller: "cont",
-        trigger: "#Brands",
-        start: "top bottom",
+        trigger: downloadCard2.value,
+        start: "top 80%",
         toggleActions: "play none none reset",
       },
     }

@@ -124,8 +124,10 @@ onMounted(() => {
       ease: "power1.inOut",
       scrollTrigger: {
         // scroller: "cont",
-        trigger: "cont",
-        start: "top top ",
+        trigger: title.value,
+        start: "top bottom",
+        // end: "bottom",
+
         toggleActions: "play none none reset",
       },
     }
@@ -139,8 +141,8 @@ onMounted(() => {
       duration: 2.5,
       ease: "power1.out",
       scrollTrigger: {
-        trigger: container.value,
-        start: "top 50%",
+        trigger: firstDiv.value,
+        start: "top bottom",
         end: "bottom top",
         toggleActions: "play none none reset",
       },
@@ -175,8 +177,8 @@ onMounted(() => {
       duration: 2.5,
       ease: "power1.out",
       scrollTrigger: {
-        trigger: container.value,
-        start: "top 50%",
+        trigger: thirdDiv.value,
+        start: "top bottom",
         end: "bottom top",
         toggleActions: "play none none reset",
         // markers: true,
@@ -216,10 +218,10 @@ onMounted(() => {
 }
 
 .slide-fade-enter-active {
-  animation: slide-in-right 0.5s both;
+  animation: slide-in-right 0.4s both;
 }
 
 .slide-fade-leave-active {
-  animation: slide-out-left 0.5s both;
+  animation: slide-out-left 0.4s both;
 }
 </style>

@@ -20,12 +20,12 @@ import { defineProps, ref } from "vue";
 const props = defineProps({
   className: {
     type: String,
-    default: "w-[80%] max-md:w-[60%] crical",
+    default: "w-[80%] max-md:w-[60%] animate-spin-slow ",
   },
 });
 </script>
 <style scoped>
-.crical {
+/* .crical {
   animation: rotate 10s linear infinite;
   display: inline-block;
 }
@@ -37,5 +37,5 @@ const props = defineProps({
   100% {
     transform: rotate(360deg);
   }
-}
+} */
 </style>

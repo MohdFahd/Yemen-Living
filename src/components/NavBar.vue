@@ -14,9 +14,12 @@
         <Button />
       </div>
     </div>
-    <div class="container mx-auto px-5 flex justify-between mt-5 md:hidden">
+    <div
+      class="container mx-auto px-5 flex justify-between mt-5 md:hidden relative"
+    >
       <Logo logo="phone" />
-      <icon name="menu" />
+      <icon name="menu" @click="menu = true" />
+      <div class="absolute bottom-0 w-full">hithere</div>
     </div>
   </div>
 </template>
@@ -41,4 +44,32 @@ onMounted(() => {
     .from(navLinks.value, { x: 100, opacity: 0, duration: 1 }, "-=0.5")
     .from(button.value, { x: 100, opacity: 0, duration: 1 }, "-=0.5");
 });
+
+const menu = ref(false);
 </script>
+<style scoped>
+.slide-fade-enter-active,
+.slide-fade-leave-active {
+  transition: all 0.5s ease;
+}
+
+.slide-fade-enter {
+  transform: translateX(100%);
+  opacity: 0;
+}
+
+.slide-fade-enter-to {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.slide-fade-leave {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.slide-fade-leave-to {
+  transform: translateX(100%);
+  opacity: 0;
+}
+</style>
