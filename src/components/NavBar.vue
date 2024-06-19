@@ -19,7 +19,7 @@
     >
       <Logo logo="phone" />
       <icon name="menu" @click="menu = true" />
-      <div class="absolute bottom-0 w-full">hithere</div>
+      <!-- <div class="absolute bottom-0 w-full">hithere</div> -->
     </div>
   </div>
 </template>
