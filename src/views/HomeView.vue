@@ -183,7 +183,9 @@
     <div class="mt-5">
       <patten />
     </div>
-    <Footer />
+    <div>
+      <Footer />
+    </div>
   </div>
 </template>
 
@@ -268,7 +270,7 @@ onMounted(() => {
         trigger: downloadTitle.value,
         start: "top bottom",
         toggleActions: "play none none reset",
-        markers: true,
+        // markers: true,
       },
     }
   );

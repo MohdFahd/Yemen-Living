@@ -4,9 +4,9 @@
       class="flex justify-between items-center mt-5 max-md:hidden container mx-auto px-10"
       ref="container"
     >
-      <div ref="logo">
+      <a ref="logo" href="/">
         <Logo logo="header" />
-      </div>
+      </a>
       <div ref="navLinks">
         <NavLinks />
       </div>

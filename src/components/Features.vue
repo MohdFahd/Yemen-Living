@@ -161,7 +161,6 @@ onMounted(() => {
         start: "top 50%",
         end: "bottom top",
         toggleActions: "play none none reset",
-        // markers: true,
         scrub: true,
       },
     }
