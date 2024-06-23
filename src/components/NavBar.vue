@@ -4,7 +4,7 @@
       class="flex justify-between items-center mt-5 max-md:hidden container mx-auto px-10"
       ref="container"
     >
-      <a ref="logo" href="/">
+      <a ref="logo" href="/Yemen-Living/">
         <Logo logo="header" />
       </a>
       <div ref="navLinks">

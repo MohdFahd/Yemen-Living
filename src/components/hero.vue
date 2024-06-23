@@ -18,16 +18,14 @@
         fill="#EEEEEE"
       />
     </svg>
-
-    <p
-      class="md:text-5xl max-w-5xl z-30 max-md:text-xl max-md:text-center"
-      ref="textDiv"
-    >
-      <span class="bold max-md:text-3xl">Yemen Living</span>
-      Convenience in shopping Quality in products and diversity in brands...
-    </p>
-    <div class="md:hidden">
-      <Button />
+    <div ref="textDiv" class="flex justify-center items-center flex-col">
+      <p class="md:text-5xl max-w-5xl z-30 max-md:text-xl max-md:text-center">
+        <span class="bold max-md:text-3xl">Yemen Living</span>
+        Convenience in shopping Quality in products and diversity in brands...
+      </p>
+      <div class="md:hidden">
+        <Button />
+      </div>
     </div>
   </div>
   <div
