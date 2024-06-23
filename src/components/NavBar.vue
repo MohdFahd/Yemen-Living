@@ -18,9 +18,14 @@
       class="container mx-auto px-5 flex justify-between mt-5 md:hidden relative"
     >
       <Logo logo="phone" />
-      <icon name="menu" @click="menu = true" />
+      <icon name="menu" @click="menu = !menu" />
       <!-- <div class="absolute bottom-0 w-full">hithere</div> -->
     </div>
+    <transition-group name="slide" mode="out-in">
+      <div class="mt-5 md:hidden" v-if="menu">
+        <NavLinks @close-menu="menu = false" />
+      </div>
+    </transition-group>
   </div>
 </template>
 
@@ -48,28 +53,41 @@ onMounted(() => {
 const menu = ref(false);
 </script>
 <style scoped>
-.slide-fade-enter-active,
-.slide-fade-leave-active {
-  transition: all 0.5s ease;
+@keyframes slide-in-top {
+  0% {
+    transform: translateY(-100px);
+
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
 }
 
-.slide-fade-enter {
-  transform: translateX(100%);
-  opacity: 0;
+@keyframes slide-out-down {
+  0% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-100px);
+    opacity: 0;
+  }
 }
 
-.slide-fade-enter-to {
-  transform: translateX(0);
-  opacity: 1;
+.slide-enter-active {
+  /* transition: all 0.4s ease; */
+  animation: slide-in-top 0.4s both;
+  /* position: absolute; */
 }
 
-.slide-fade-leave {
-  transform: translateX(0);
-  opacity: 1;
+.slide-leave-active {
+  /* transition: all 0.4s ease; */
+  animation: slide-out-down 0.4s both;
+  /* position: absolute; */
 }
-
-.slide-fade-leave-to {
-  transform: translateX(100%);
-  opacity: 0;
+.slide-move {
+  transition: all 0.4s ease;
 }
 </style>
