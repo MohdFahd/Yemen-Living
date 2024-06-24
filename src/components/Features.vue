@@ -28,7 +28,7 @@
           </div> -->
         </div>
         <div
-          class="relative flex justify-center items-center max-md:my-5 h-[500px]"
+          class="relative flex justify-center items-center max-md:my-5 h-[500px] z-0"
           ref="secondDiv"
         >
           <div class="absolute z-0">
@@ -37,8 +37,7 @@
           <transition name="slide-fade" mode="out-in">
             <img
               :src="selectedFeature.img"
-              class="z-10 md:w-[70%] max-md:w-[90%]"
-              width="50%"
+              class="z-10 md:w-[60%] max-md:w-[90%]"
               alt=""
               :key="selectedFeature.img"
             />
@@ -46,16 +45,18 @@
         </div>
 
         <div
-          class="text-xl bold w-full md:ml-10 max-md:text-center max-md:flex max-md:justify-center"
+          class="text-xl bold w-full md:ml-10 max-md:text-center max-md:flex max-md:justify-center overflow-hidden z-50"
           ref="thirdDiv"
         >
-          <h2
-            class="w-64"
-            v-if="selectedFeature.title"
-            :key="selectedFeature.title"
-          >
-            {{ selectedFeature.title }}
-          </h2>
+          <transition name="skew-slide-fade">
+            <h2
+              class="w-64"
+              v-if="selectedFeature.title"
+              :key="selectedFeature.title"
+            >
+              {{ selectedFeature.title }}
+            </h2>
+          </transition>
         </div>
       </div>
     </div>
@@ -112,6 +113,7 @@ const title = ref(null);
 const firstDiv = ref(null);
 const secondDiv = ref(null);
 const thirdDiv = ref(null);
+const tl = gsap.timeline();
 
 onMounted(() => {
   gsap.fromTo(
@@ -161,29 +163,29 @@ onMounted(() => {
         start: "top 50%",
         end: "bottom top",
         toggleActions: "play none none reset",
-        scrub: true,
+        // scrub: true,
       },
     }
   );
 
   // Animation for the third div (come from the left)
-  gsap.fromTo(
-    thirdDiv.value,
-    { x: 100, opacity: 0 },
-    {
-      x: 0,
-      opacity: 1,
-      duration: 2.5,
-      ease: "power1.out",
-      scrollTrigger: {
-        trigger: thirdDiv.value,
-        start: "top bottom",
-        end: "bottom top",
-        toggleActions: "play none none reset",
-        // markers: true,
-      },
-    }
-  );
+  // gsap.fromTo(
+  //   thirdDiv.value,
+  //   { x: 100, opacity: 0 },
+  //   {
+  //     x: 0,
+  //     opacity: 1,
+  //     duration: 2.5,
+  //     ease: "power1.out",
+  //     scrollTrigger: {
+  //       trigger: thirdDiv.value,
+  //       start: "top bottom",
+  //       end: "bottom top",
+  //       toggleActions: "play none none reset",
+  //       // markers: true,
+  //     },
+  //   }
+  // );
 });
 </script>
 
@@ -222,5 +224,35 @@ onMounted(() => {
 
 .slide-fade-leave-active {
   animation: slide-out-left 0.4s both;
+}
+@keyframes skew-slide-fade-enter {
+  0% {
+    transform: translateY(100px) skewY(10deg);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0px) skewY(0deg);
+    opacity: 1;
+  }
+}
+
+@keyframes skew-slide-fade-leave {
+  0% {
+    transform: translateY(0px) skewY(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-100px) skewY(-10deg);
+    opacity: 0;
+  }
+}
+
+.skew-slide-fade-enter-active {
+  animation: skew-slide-fade-enter 1s both;
+  animation-delay: 0.5s; /* Adding a delay of 1 second */
+}
+
+.skew-slide-fade-leave-active {
+  animation: skew-slide-fade-leave 0.2s both;
 }
 </style>
