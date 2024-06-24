@@ -12,7 +12,7 @@
           ref="firstDiv"
         >
           <radioTap :tabs="Features" @update="handleUpdate" />
-          <transition name="fade">
+          <transition name="skew-slide-fade">
             <h3 class="bold text-lg text-center w-full md:hidden">
               {{ selectedFeature.tap }}
             </h3>
@@ -121,6 +121,7 @@ onMounted(() => {
     { y: 100, opacity: 0 },
     {
       y: 0,
+      delay: 0.23,
       opacity: 1,
       duration: 1.5,
       ease: "power1.inOut",
@@ -141,6 +142,7 @@ onMounted(() => {
       x: 0,
       opacity: 1,
       duration: 2.5,
+      delay: 0.23,
       ease: "power1.out",
       scrollTrigger: {
         trigger: firstDiv.value,
@@ -155,6 +157,7 @@ onMounted(() => {
     { scale: 0.5 },
     {
       scale: 1,
+      delay: 0.23,
       opacity: 1,
       duration: 3.5,
       ease: "power1.out",
@@ -249,7 +252,7 @@ onMounted(() => {
 
 .skew-slide-fade-enter-active {
   animation: skew-slide-fade-enter 1s both;
-  animation-delay: 0.5s; /* Adding a delay of 1 second */
+  animation-delay: 0.3s; /* Adding a delay of 1 second */
 }
 
 .skew-slide-fade-leave-active {
