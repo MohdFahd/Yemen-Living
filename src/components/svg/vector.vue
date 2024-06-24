@@ -20,7 +20,7 @@ import { defineProps, ref } from "vue";
 const props = defineProps({
   className: {
     type: String,
-    default: "w-[80%] max-md:w-[60%] animate-spin-slow ",
+    default: "w-[80%] max-md:w-[100%] animate-spin-slow ",
   },
 });
 </script>

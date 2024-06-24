@@ -7,13 +7,14 @@
         :id="tab.tap"
         :checked="selected === index"
         :name="groupName"
-        @change="updateSelection(tab)"
+        @change="updateSelection(tab, index)"
       />
       <label
         :for="tab.tap"
-        class="mx-2 cursor-pointer bold hover:text-blue-500"
-        >{{ tab.tap }}</label
-      >
+        class="mx-2 cursor-pointer font-extrabold hoverBold hover:opacity-80"
+        :class="{ bold: selected === index }"
+        >{{ tab.tap }}
+      </label>
       <br />
     </div>
   </div>
@@ -25,21 +26,34 @@ import { ref, defineProps, defineEmits, onMounted } from "vue";
 const props = defineProps({
   tabs: Array,
 });
-
 const emit = defineEmits(["update"]);
 const selected = ref(0); // Start with the first tab
 const groupName = "featureTabs"; // Group name for the radio buttons
+let intervalId = null;
 
 // Method to update selection and emit to parent
-const updateSelection = (tab) => {
+const updateSelection = (tab, index) => {
+  selected.value = index;
   emit("update", tab);
+  startAutoDisplay();
 };
 
-// Auto switch tabs every 2 seconds
-onMounted(() => {
-  setInterval(() => {
+// Auto switch tabs every 4.5 seconds
+const startAutoDisplay = () => {
+  if (intervalId) clearInterval(intervalId);
+  intervalId = setInterval(() => {
     selected.value = (selected.value + 1) % props.tabs.length;
-    updateSelection(props.tabs[selected.value]); // Emit the updated tab to parent
+    emit("update", props.tabs[selected.value]);
   }, 4500);
+};
+
+// Start auto switch tabs on component mount
+onMounted(() => {
+  startAutoDisplay();
 });
 </script>
+<style scoped>
+.bold:hover {
+  font-weight: bold;
+}
+</style>

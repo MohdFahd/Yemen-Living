@@ -31,13 +31,13 @@
           class="relative flex justify-center items-center max-md:my-5 h-[500px] z-0"
           ref="secondDiv"
         >
-          <div class="absolute z-0">
+          <div class="absolute z-0 left-[5vw] max-md:left-[5vw]">
             <vector />
           </div>
           <transition name="slide-fade" mode="out-in">
             <img
               :src="selectedFeature.img"
-              class="z-10 md:w-[60%] max-md:w-[90%]"
+              class="z-10 md:w-[60%] max-md:w-[80%]"
               alt=""
               :key="selectedFeature.img"
             />

@@ -22,6 +22,9 @@ body {
 .bold {
   font-family: "RobotoSlab-Medium" !important;
 }
+.hoverBold:hover {
+  font-family: "RobotoSlab-Medium" !important;
+}
 .link:hover {
   font-family: "RobotoSlab-Medium" !important;
 }
