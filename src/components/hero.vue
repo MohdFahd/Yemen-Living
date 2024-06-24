@@ -50,6 +50,7 @@ onMounted(() => {
   gsap.from(textDiv.value, {
     x: -200, // Adjust the value as needed
     opacity: 0,
+    delay: 3.8,
     duration: 2.5,
     ease: "back.out",
   });
@@ -57,6 +58,7 @@ onMounted(() => {
   gsap.from(image.value, {
     x: 500, // Adjust the value as needed
     y: 200,
+    delay: 3.8,
     opacity: 0,
     rotation: 45,
     duration: 2.5,

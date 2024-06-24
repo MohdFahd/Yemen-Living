@@ -45,7 +45,7 @@ const navLinks = ref(null);
 const button = ref(null);
 
 onMounted(() => {
-  tl.from(logo.value, { x: 100, opacity: 0, duration: 1 })
+  tl.from(logo.value, { x: 100, opacity: 0, duration: 1, delay: 4.5 })
     .from(navLinks.value, { x: 100, opacity: 0, duration: 1 }, "-=0.5")
     .from(button.value, { x: 100, opacity: 0, duration: 1 }, "-=0.5");
 });
