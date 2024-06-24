@@ -11,14 +11,11 @@ onMounted(async () => {
   const tl = gsap.timeline();
   const curve = "M0 502S175 272 500 272s500 230 500 230V0H0Z";
   const flat = "M0 2S175 1 500 1s500 1 500 1V0H0Z";
-  tl.set(".homepage", {
-    display: "none",
+  tl.from(".loader-wrap-heading h1", {
+    delay: 0.5,
+    y: 200,
+    skewY: 10,
   })
-    .from(".loader-wrap-heading h1", {
-      delay: 0.5,
-      y: 200,
-      skewY: 10,
-    })
     .to(".loader-wrap-heading h1", {
       delay: 1.5,
       y: -200,
@@ -32,14 +29,9 @@ onMounted(async () => {
       duration: 0.8,
       attr: { d: flat },
       ease: "power2.easeOut",
-    })
-    .set(".homepage", {
-      display: "block",
-    })
-    .to(".homepage", {
-      opacity: 1,
-      duration: 1, // Ensure the animation duration is short
-      ease: "power2.inOut",
+      onComplete: () => {
+        isLoading.value = false;
+      },
     })
     .to(".loader-wrap", {
       y: -1500,
@@ -100,7 +92,7 @@ onMounted(async () => {
       >
     </div>
   </div>
-  <div class="overflow-hidden relative homepage">
+  <div class="overflow-hidden relative homepage" v-if="!isLoading">
     <HomeView />
   </div>
 </template>
