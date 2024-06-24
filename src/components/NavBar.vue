@@ -18,8 +18,36 @@
       class="container mx-auto px-5 flex justify-between mt-5 md:hidden relative"
     >
       <Logo logo="phone" />
-      <icon name="menu" @click="menu = !menu" />
-      <!-- <div class="absolute bottom-0 w-full">hithere</div> -->
+      <div>
+        <label>
+          <div
+            class="w-9 h-10 cursor-pointer flex flex-col items-center justify-center"
+          >
+            <input
+              class="hidden"
+              v-model="menu"
+              :class="{ peer: menu }"
+              @click="menu = !menu"
+              type="checkbox"
+            />
+            <div
+              class="w-[50%] h-[2px] bg-black rounded-sm transition-all duration-300 origin-left translate-y-[0.45rem]"
+              :class="{
+                'peer-checked:rotate-[-45deg]': menu,
+              }"
+            ></div>
+            <div
+              class="w-[50%] h-[2px] bg-black rounded-md transition-all duration-300 origin-center peer-checked:hidden"
+            ></div>
+            <div
+              class="w-[50%] h-[2px] bg-black rounded-md transition-all duration-300 origin-left -translate-y-[0.45rem]"
+              :class="{
+                ' peer-checked:rotate-[45deg]': menu,
+              }"
+            ></div>
+          </div>
+        </label>
+      </div>
     </div>
     <transition-group name="slide" mode="out-in">
       <div class="mt-5 md:hidden" v-if="menu">
@@ -70,6 +98,9 @@ const menu = ref(false);
     transform: translateY(0px);
     opacity: 1;
   }
+  50% {
+    opacity: 0.2;
+  }
   100% {
     transform: translateY(-100px);
     opacity: 0;
@@ -84,8 +115,9 @@ const menu = ref(false);
 
 .slide-leave-active {
   /* transition: all 0.4s ease; */
-  animation: slide-out-down 0.4s both;
-  /* position: absolute; */
+  animation: slide-out-down 0.2s both;
+  position: absolute;
+  left: 40%;
 }
 .slide-move {
   transition: all 0.4s ease;

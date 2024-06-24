@@ -1,6 +1,7 @@
 <template>
   <div
     class="self-start md:pt-52 max-md:pt-10 relative max-md:flex max-md:justify-center max-md:items-center max-md:flex-col"
+    ref="textDiv"
   >
     <svg
       width="183"
@@ -18,7 +19,7 @@
         fill="#EEEEEE"
       />
     </svg>
-    <div ref="textDiv" class="flex justify-center items-center flex-col">
+    <div class="flex justify-center items-center flex-col">
       <p class="md:text-5xl max-w-5xl z-30 max-md:text-xl max-md:text-center">
         <span class="bold max-md:text-3xl">Yemen Living</span>
         Convenience in shopping Quality in products and diversity in brands...
