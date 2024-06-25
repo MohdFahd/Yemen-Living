@@ -33,7 +33,7 @@
     class="flex justify-center max-[1023px]:justify-center items-start relative overflow-hidden max-md:mt-16"
     ref="image"
   >
-    <vector class="absolute top-20" />
+    <vector class="absolute top-20 w-[80%] max-md:w-[70%] animate-spin-slow" />
     <img src="../assets/imgs/hero.webp" class="z-10" width="60%" alt="" />
   </div>
 </template>
