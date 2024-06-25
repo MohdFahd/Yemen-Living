@@ -268,7 +268,6 @@ onMounted(() => {
       trigger: brandSection.value,
       start: "20% 50%",
       end: "bottom top",
-      markers: true,
       toggleActions: "play none none none",
     },
   });
