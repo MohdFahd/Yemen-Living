@@ -129,6 +129,7 @@ onMounted(() => {
         // scroller: "cont",
         trigger: title.value,
         start: "top bottom",
+        // markers: true,
         // end: "bottom",
 
         toggleActions: "play none none reset",
