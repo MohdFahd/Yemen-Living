@@ -1,6 +1,6 @@
 <template>
   <div
-    class="container mx-auto px-10 max-md:px-5 flex justify-between items-center mt-4"
+    class="container mx-auto px-10 max-md:px-5 flex justify-between items-center mt-28"
   >
     <div class="flex flex-col w-full">
       <ButtonIcon

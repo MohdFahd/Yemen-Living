@@ -104,7 +104,7 @@
     <div class="mt-5">
       <patten />
     </div>
-    <section id="Brands" ref="brandSection" class="mt-5 relative">
+    <section id="Brands" class="mt-5 relative">
       <svg
         width="617"
         height="1553"
@@ -153,6 +153,7 @@
 
       <div
         class="container mx-auto px-10 max-md:px-5 text-center flex flex-col justify-center items-center py-24"
+        ref="brandSection"
       >
         <div class="w-full flex justify-center text-center">
           <h2 class="bold text-center w-full text-3xl max-md:text-2xl max-w-xs">
@@ -297,22 +298,23 @@ const downloadTitle = ref(null);
 const downloadCard1 = ref(null);
 const downloadCard2 = ref(null);
 onMounted(() => {
-  gsap.fromTo(
-    brandSection.value,
-    { y: 300 },
-    {
-      y: 0,
-      duration: 1.5,
-      ease: "power1.inOut",
-      scrollTrigger: {
-        // scroller: "cont",
-        trigger: brandSection.value,
-        start: "top bottom",
-
-        toggleActions: "play none none reset",
-      },
-    }
-  );
+  gsap.set(brandSection.value, {
+    y: 300,
+    opacity: 0,
+  });
+  gsap.to(brandSection.value, {
+    y: 0,
+    opacity: 1,
+    duration: 1.5,
+    ease: "power1.inOut",
+    scrollTrigger: {
+      // scroller: "cont",
+      trigger: brandSection.value,
+      start: "50% 50%",
+      end: "bottom top",
+      toggleActions: "play none none none",
+    },
+  });
   gsap.fromTo(
     downloadTitle.value,
     { y: 100, opacity: 0 },
@@ -324,8 +326,8 @@ onMounted(() => {
       scrollTrigger: {
         // scroller: "cont",
         trigger: downloadTitle.value,
-        start: "top bottom",
-        toggleActions: "play none none reset",
+        start: "50% 50%",
+        toggleActions: "play none none none",
         // markers: true,
       },
     }
@@ -341,8 +343,8 @@ onMounted(() => {
       scrollTrigger: {
         // scroller: "cont",
         trigger: downloadCard1.value,
-        start: "top 80%",
-        toggleActions: "play none none reset",
+        start: "50% 50%",
+        toggleActions: "play none none none",
       },
     }
   );
@@ -357,8 +359,8 @@ onMounted(() => {
       scrollTrigger: {
         // scroller: "cont",
         trigger: downloadCard2.value,
-        start: "top 80%",
-        toggleActions: "play none none reset",
+        start: "50% 50%",
+        toggleActions: "play none none none",
       },
     }
   );
