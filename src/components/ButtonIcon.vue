@@ -1,5 +1,7 @@
 <template>
-  <div :class="['rounded-xl flex w-72 mt-6 bold cursor-pointer', parentClass]">
+  <div
+    :class="['rounded-[2px] flex w-72 mt-6 bold cursor-pointer', parentClass]"
+  >
     <slot />
 
     <span class="mx-3">{{ title }}</span>

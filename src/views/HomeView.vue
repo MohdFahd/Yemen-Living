@@ -175,7 +175,7 @@
           <div
             v-for="(brand, index) in brands"
             :key="index"
-            class="mx-4 w-20 h-20 max-md:w-16 max-md:h-16 bg-white cursor-pointer rounded-md shadow mt-5 p-2 z-10 flex justify-center items-center brand-card"
+            class="mx-4 w-20 h-20 max-md:w-16 max-md:h-16 bg-white cursor-pointer rounded-[1px] shadow mt-5 p-2 z-10 flex justify-center items-center brand-card"
           >
             <img :src="brand.src" alt="" class="" />
           </div>
