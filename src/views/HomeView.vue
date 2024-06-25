@@ -266,8 +266,9 @@ onMounted(() => {
     scrollTrigger: {
       // scroller: "cont",
       trigger: brandSection.value,
-      start: "50% 70%",
+      start: "20% 50%",
       end: "bottom top",
+      markers: true,
       toggleActions: "play none none none",
     },
   });
