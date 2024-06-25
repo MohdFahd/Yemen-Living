@@ -22,22 +22,17 @@
         <img src="../assets/icons/privacy.svg" alt=""
       /></ButtonIcon>
     </div>
-    <div class="flex max-md:hidden w-full justify-center">
-      <img src="../assets/icons/youtube.svg" class="mx-3" alt="" />
-      <img src="../assets/icons/x.svg" class="mx-3" alt="" />
-      <img src="../assets/icons/instgram.svg" class="mx-3" alt="" />
-      <img src="../assets/icons/facebook.svg" class="mx-3" alt="" />
-    </div>
+    <ul class="flex max-md:hidden w-full justify-center">
+      <socialMedia />
+    </ul>
     <div class="flex w-full justify-end">
       <Logo logo="footer" />
     </div>
   </div>
-  <div class="flex justify-center my-3 md:hidden">
-    <img src="../assets/icons/youtube.svg" class="mx-3" alt="" />
-    <img src="../assets/icons/x.svg" class="mx-3" alt="" />
-    <img src="../assets/icons/instgram.svg" class="mx-3" alt="" />
-    <img src="../assets/icons/facebook.svg" class="mx-3" alt="" />
-  </div>
+  <ul class="flex justify-center my-3 md:hidden">
+    <socialMedia />
+  </ul>
+
   <hr class="container mx-auto px-10 max-md:px-5 my-5" />
   <div
     class="container mx-auto px-10 max-md:px-5 flex justify-between max-md:flex-col-reverse max-md:justify-center max-md:items-center my-4"
@@ -59,8 +54,7 @@
 <script setup>
 import ButtonIcon from "../components/ButtonIcon.vue";
 import Logo from "../components/logo.vue";
+import socialMedia from "../components/socialMedia.vue";
 
 const date = new Date().getFullYear();
 </script>
-
-<style></style>

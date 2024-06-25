@@ -132,7 +132,7 @@ onMounted(() => {
         // markers: true,
         // end: "bottom",
 
-        toggleActions: "play none none reset",
+        toggleActions: "play none none none",
       },
     }
   );
@@ -149,7 +149,7 @@ onMounted(() => {
         trigger: firstDiv.value,
         start: "top bottom",
         end: "bottom top",
-        toggleActions: "play none none reset",
+        toggleActions: "play none none none",
       },
     }
   );
@@ -166,7 +166,7 @@ onMounted(() => {
         trigger: container.value,
         start: "top 50%",
         end: "bottom top",
-        toggleActions: "play none none reset",
+        toggleActions: "play none none none",
         // scrub: true,
       },
     }
@@ -185,7 +185,7 @@ onMounted(() => {
   //       trigger: thirdDiv.value,
   //       start: "top bottom",
   //       end: "bottom top",
-  //       toggleActions: "play none none reset",
+  //       toggleActions: "play none none none",
   //       // markers: true,
   //     },
   //   }
