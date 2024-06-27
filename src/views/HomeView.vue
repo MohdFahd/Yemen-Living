@@ -16,6 +16,7 @@ const runAnimation = async () => {
     skewY: 10,
   })
     .to(".loader-wrap-heading h1", {
+      delay: 0.3,
       y: -200,
     })
     .to(".svg path", {
@@ -24,7 +25,7 @@ const runAnimation = async () => {
       ease: "power2.easeIn",
     })
     .to(".svg path", {
-      duration: 0.5,
+      duration: 0.8,
       attr: { d: flat },
       ease: "power2.easeOut",
       onComplete: () => {
@@ -33,7 +34,7 @@ const runAnimation = async () => {
     })
     .to(".loader-wrap", {
       y: -1500,
-      duration: 0.5, // Reduce duration
+      duration: 0.3, // Reduce duration
     })
     .set(".loader-wrap", {
       zIndex: -1,
