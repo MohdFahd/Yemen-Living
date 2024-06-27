@@ -2,6 +2,7 @@
 import { onMounted, ref, nextTick } from "vue";
 import gsap from "gsap";
 import Home from "../components/home.vue";
+import logo from "../components/logo.vue";
 import { useRouter } from "vue-router";
 
 const isLoading = ref(true);
@@ -79,35 +80,8 @@ router.beforeEach((to, from, next) => {
         <h1
           class="relative text-3xl z-20 text-[#e0e0e0] uppercase flex justify-center items-center"
         >
-          <span class="absolute top-0 right-0 text-xs">&copy;</span>
-          <svg
-            width="44"
-            height="66"
-            viewBox="0 0 44 66"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M1.43189 21.6228L21.8268 0H0V17.9537V46.1965V65.6648H21.8268L1.43189 45.0083V21.6228Z"
-              fill="white"
-            />
-            <path d="M22.1729 0L43.9996 23.3236V0H22.1729Z" fill="white" />
-            <path
-              d="M43.6532 65.6649V43.7766L22.1729 65.6649H43.6532Z"
-              fill="white"
-            />
-            <path
-              d="M22.2615 24.2627L12.9658 34.049L22.2615 43.8352L31.5572 34.049L22.2615 24.2627Z"
-              fill="white"
-            />
-            div
-          </svg>
-          <div class="text-center mx-4 overflow-hidden">
-            Yemen <br />
-            Living
-          </div>
-        </h1></span
-      >
+          <logo logo="headerWhite" /></h1
+      ></span>
     </div>
   </div>
   <div class="overflow-hidden relative homepage" v-if="!isLoading">

@@ -15,12 +15,14 @@
       >
         <img src="../assets/icons/email.svg" alt=""
       /></ButtonIcon>
-      <ButtonIcon
-        title="privacy policy"
-        parentClass="text-black flex my-2 cursor-auto "
-      >
-        <img src="../assets/icons/privacy.svg" alt=""
-      /></ButtonIcon>
+      <router-link to="/rights">
+        <ButtonIcon
+          title="privacy policy"
+          parentClass="text-black flex my-2 cursor-auto "
+        >
+          <img src="../assets/icons/privacy.svg" alt=""
+        /></ButtonIcon>
+      </router-link>
     </div>
     <ul class="flex max-md:hidden w-full justify-center">
       <socialMedia />

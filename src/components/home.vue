@@ -166,7 +166,7 @@
               /></ButtonIcon>
               <img
                 src="../assets/imgs/Andriod.webp"
-                class="overflow-hidden mt-5"
+                class="overflow-hidden mt-5 w-[95%]"
                 alt=""
               />
             </card>
@@ -179,20 +179,20 @@
             >
               <ButtonIcon
                 title="Download for IOS"
-                parentClass="bg-[#345A8A] text-white text-center rounded-xl flex  w-72 p-4 mt-6 bold cursor-pointer hover:bg-black hover:text-white "
+                parentClass="bg-[#345A8A] text-white text-center rounded-sm flex  w-72 p-4 mt-6 bold cursor-pointer hover:bg-black hover:text-white "
               >
                 <img src="../assets/icons/ios.svg" alt=""
               /></ButtonIcon>
               <img
                 src="../assets/imgs/iPhone.webp"
-                class="overflow-hidden mt-5"
+                class="overflow-hidden mt-5 w-[95%]"
                 alt=""
               />
             </card>
           </div>
         </div>
       </div>
-      <div class="absolute w-full my-5 bottom-0 z-10">
+      <div class="absolute w-full my-5 -bottom-9 z-10">
         <patten />
       </div>
     </section>
