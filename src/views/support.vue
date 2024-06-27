@@ -1,134 +1,154 @@
 <template>
-  <section class="my-5">
-    <p class="text-2xl w-[50%] leading-9 my-3 max-md:text-lg max-md:w-full">
-      يُرجى استخدام نموذج الاتصال أدناه للتواصل معنا وسنعاود الاتصال بك.نتطلع
-      قدماً إلى التواصل معكم!
-    </p>
-    <div
-      class="grid grid-cols-12 my-5 gap-4 max-md:grid-cols-1 max-md:grid-rows-2"
+  <div
+    class="loader-wrap absolute z-30 h-screen w-full flex overflow-hidden items-center justify-center bg-transparent"
+  >
+    <svg
+      viewBox="0 0 1000 1000"
+      preserveAspectRatio="none"
+      class="svg fill-black opacity-95 absolute top-0 w-[100vw] h-[110vh] max-md:w-[200vw] max-md:ml-[-50vw]"
     >
-      <div class="col-span-4 flex flex-col max-md:row-span-2">
-        <div class="flex items-center my-3">
-          <img
-            src="./assets/icons/locationPin.svg"
-            class="me-1 self-start"
-            alt=""
-          />
-          <span class="font-bold"
-            >صنعاء - شارع القصر جوار البوابة الجنوبية
-          </span>
-        </div>
-        <div class="flex items-center my-3">
-          <img
-            src="./assets/icons/smartphone.svg"
-            class="me-1 self-start"
-            alt=""
-          />
-          <span class="font-bold">7769777747 </span>
-        </div>
-        <div class="flex items-center my-3">
-          <img src="./assets/icons/email.svg" class="me-1 self-start" alt="" />
-          <span class="font-bold">admin@alsaifiasa.com </span>
-        </div>
-        <div class="flex items-center my-3">
-          <img src="./assets/icons/global.svg" class="me-1 self-start" alt="" />
-          <span class="font-bold">www.alsaifiasa.com </span>
-        </div>
-      </div>
-      <div
-        class="col-span-8 max-[1024px]:col-span-12 flex bg-[#F9F9F9] rounded-2xl p-7"
-      >
-        <form action="" method="post" class="w-full grid gap-2">
-          <div class="flex flex-col col-span-12 my-2">
-            <label for="" class="text-primary">
-              يرجى اختيار نوع الاستفسار الخاص بك:
-            </label>
-            <select name="" id="" class="rounded-lg py-2 mt-2 px-2 bg-white">
-              <option value="">المبيعات</option>
-              <option value="">المبيعات</option>
-              <option value="">المبيعات</option>
-            </select>
-          </div>
-          <div class="flex flex-col my-2 col-span-6 max-md:col-span-12">
-            <label for="" class="text-primary"> الاسم الاول </label>
-            <input
-              type="text"
-              class="rounded-lg py-2 mt-2 px-2 bg-white"
-              name=""
-              id=""
-              placeholder="ضع اسمك الأول"
-              required
-            />
-          </div>
-          <div class="flex flex-col my-2 col-span-6 max-md:col-span-12">
-            <label for="" class="text-primary">الاسم الاخير </label>
-            <input
-              type="text"
-              class="rounded-lg py-2 mt-2 px-2 bg-white"
-              name=""
-              id=""
-              required
-              placeholder="ضع اسمك الأخير"
-            />
-          </div>
-          <div class="flex flex-col my-2 col-span-6 max-md:col-span-12">
-            <label for="" class="text-primary">البريد الإلكتروني </label>
-            <input
-              type="email"
-              class="rounded-lg py-2 mt-2 px-2 bg-white"
-              name=""
-              id=""
-              required
-              placeholder="example@gmail.com"
-            />
-          </div>
-          <div class="flex flex-col my-3 col-span-6 max-md:col-span-12">
-            <label for="" class="text-primary"> الهاتف </label>
-            <input
-              type="number"
-              class="rounded-lg py-2 px-2 bg-white"
-              name=""
-              id=""
-              pattern="[0-9]{9}"
-              minlength="9"
-              maxlength="9"
-              placeholder="770000000"
-              required
-            />
-          </div>
-          <div class="flex flex-col my-3 col-span-12">
-            <label for="" class="text-primary">الرسالة</label>
-            <textarea
-              name=""
-              id=""
-              rows="5"
-              class="rounded-lg py-2 px-2 bg-white mt-1"
-            ></textarea>
-          </div>
+      <path id="svg" d="M0,1005S175,995,500,995s500,5,500,5V0H0Z"></path>
+    </svg>
 
-          <!-- <button
-              class="btn bg-secondary text-[#FFFFFF] font-bold text-lg rounded-2xl hover:bg-primary max-md:col-span-12 sendbtn hover:text-primary ">
-              إرسال
-              <img src="./assets/icons/send.svg" alt="" />
-            </button> -->
-          <button
-            class="btn bg-secondary text-[#FFFFFF] font-bold text-lg rounded-2xl hover:bg-primary max-md:col-span-12 sendbtn overflow-hidden max-md:hover:text-primary"
-          >
-            <span>إرسال </span>
-            <div class="svg-wrapper-1">
-              <div class="svg-wrapper">
-                <img src="./assets/icons/send.svg" alt="" />
-              </div>
-            </div>
-          </button>
-        </form>
-      </div>
+    <div class="loader-wrap-heading">
+      <span>
+        <h1
+          class="relative text-3xl z-20 text-[#e0e0e0] uppercase flex justify-center items-center"
+        >
+          Support
+        </h1></span
+      >
     </div>
-  </section>
+  </div>
+  <div class="overflow-hidden relative homepage" v-if="!isLoading">
+    <Navbar />
+    <div
+      class="absolute inset-x-0 top-96 w-full h-20 bg-pattern -translate-y-full max-md:top-0 -z-10"
+    >
+      <svg
+        width="204"
+        height="367"
+        viewBox="0 0 204 367"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+        class="absolute max-md:w-[30%] max-md:h-[1153px] left-0 top-32 max-md:top-0"
+      >
+        <g clip-path="url(#clip0_232_326)">
+          <path
+            d="M364.661 715.995C158.657 816.372 -173.187 960.877 -148.666 678.028C-117.461 318.083 386.684 59.2193 59.1141 23.8103"
+            stroke="#E1E1E1"
+          />
+          <path
+            d="M283.884 710.249C77.8801 810.625 -253.964 955.131 -229.443 672.282C-198.238 312.337 305.906 53.4731 -21.6633 18.064"
+            stroke="#E1E1E1"
+          />
+          <path
+            d="M202.9 709.511C-3.10326 809.887 -334.948 954.393 -310.427 671.544C-279.222 311.599 224.923 52.735 -102.647 17.326"
+            stroke="#E1E1E1"
+          />
+          <path
+            d="M122.096 714.885C-83.907 815.262 -415.752 959.767 -391.23 676.918C-360.025 316.973 144.119 58.1092 -183.45 22.7001"
+            stroke="#E1E1E1"
+          />
+          <path
+            d="M42.1033 727.579C-163.9 827.956 -495.745 972.461 -471.224 689.612C-440.019 329.667 64.1259 70.8031 -263.444 35.3941"
+            stroke="#E1E1E1"
+          />
+          <path
+            d="M-36.1164 748.563C-242.12 848.939 -573.964 993.445 -549.443 710.596C-518.238 350.651 -14.0938 91.7869 -341.663 56.3779"
+            stroke="#E1E1E1"
+          />
+          <path
+            d="M-111.455 778.251C-317.459 878.628 -649.303 1023.13 -624.782 740.284C-593.577 380.339 -89.4327 121.475 -417.002 86.0661"
+            stroke="#E1E1E1"
+          />
+        </g>
+        <defs>
+          <clipPath id="clip0_232_326">
+            <rect width="204" height="367" fill="white" />
+          </clipPath>
+        </defs>
+      </svg>
+    </div>
+    <section class="my-5 flex justify-center" ref="support">
+      <supportComponent />
+    </section>
+    <div class="mt-5">
+      <Footer />
+    </div>
+  </div>
 </template>
 
-<script>
-export default {};
+Copy code
+<script setup>
+import { onMounted, ref, nextTick, onBeforeUnmount } from "vue";
+import gsap from "gsap";
+import Navbar from "../components/NavBar.vue";
+import Footer from "../components/Footer.vue";
+import supportComponent from "../components/supportComponent.vue";
+import { useRouter } from "vue-router";
+
+const isLoading = ref(true);
+const support = ref(null);
+
+const resetAnimation = () => {
+  gsap.set(".loader-wrap-heading h1", { y: 0, skewY: 0 });
+  gsap.set(".svg path", {
+    attr: { d: "M0,1005S175,995,500,995s500,5,500,5V0H0Z" },
+  });
+  gsap.set(".loader-wrap", { y: 0, zIndex: 10, display: "flex" });
+  isLoading.value = true;
+};
+
+const runAnimation = async () => {
+  await nextTick(); // Ensure the DOM is fully rendered before starting animations
+  const tl = gsap.timeline();
+  const curve = "M0 502S175 272 500 272s500 230 500 230V0H0Z";
+  const flat = "M0 2S175 1 500 1s500 1 500 1V0H0Z";
+  tl.from(".loader-wrap-heading h1", {
+    delay: 0.2,
+    y: 200,
+    skewY: 10,
+  })
+    .to(".loader-wrap-heading h1", {
+      delay: 0.5,
+      y: -200,
+    })
+    .to(".svg path", {
+      duration: 0.8,
+      attr: { d: curve },
+      ease: "power1.ease",
+      onComplete: () => {
+        isLoading.value = false;
+      },
+    })
+    .to(".loader-wrap", {
+      y: -1500,
+      duration: 0.5, // Reduce duration
+    })
+    .set(".loader-wrap", {
+      zIndex: -1,
+      display: "none",
+    });
+};
+
+onMounted(() => {
+  runAnimation();
+});
+
+const router = useRouter();
+
+router.beforeEach((to, from, next) => {
+  if (to.path !== from.path) {
+    resetAnimation();
+  }
+  next();
+});
 </script>
 
-<style></style>
+<style scoped>
+span {
+  overflow: hidden;
+  display: block;
+}
+</style>

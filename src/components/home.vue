@@ -1,6 +1,7 @@
 <template>
   <div>
     <NavBar />
+
     <section id="hero" class="md:mt-5">
       <div
         class="container mx-auto px-10 max-md:px-5 flex justify-between items-center md:relative z-10 max-[1023px]:flex-col max-[1023px]:justify-center max-[1023px]:items-center"

@@ -2,10 +2,10 @@
 import { onMounted, ref, nextTick } from "vue";
 import gsap from "gsap";
 import Home from "../components/home.vue";
+import { useRouter } from "vue-router";
 
 const isLoading = ref(true);
-
-onMounted(async () => {
+const runAnimation = async () => {
   await nextTick(); // Ensure the DOM is fully rendered before starting animations
   const tl = gsap.timeline();
   const curve = "M0 502S175 272 500 272s500 230 500 230V0H0Z";
@@ -40,6 +40,25 @@ onMounted(async () => {
       zIndex: -1,
       display: "none",
     });
+};
+const resetAnimation = () => {
+  gsap.set(".loader-wrap-heading h1", { y: 0, skewY: 0 });
+  gsap.set(".svg path", {
+    attr: { d: "M0,1005S175,995,500,995s500,5,500,5V0H0Z" },
+  });
+  gsap.set(".loader-wrap", { y: 0, zIndex: 10, display: "flex" });
+  isLoading.value = true;
+};
+onMounted(() => {
+  runAnimation();
+});
+const router = useRouter();
+
+router.beforeEach((to, from, next) => {
+  if (to.path !== from.path) {
+    resetAnimation();
+  }
+  next();
 });
 </script>
 

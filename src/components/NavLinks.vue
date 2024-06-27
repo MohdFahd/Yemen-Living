@@ -7,23 +7,23 @@
       class="text-black md:text-[22px] max-md:text-lg font-normal font-['Roboto Slab'] cursor-pointer z-10 link"
       >Home</router-link
     >
-    <a
+    <router-link
+      to="/#Features"
       class="text-black md:text-[22px] max-md:text-lg font-normal font-['Roboto Slab'] cursor-pointer z-10 link"
-      href="#Features"
       @click="closeMenu"
+      >Features</router-link
     >
-      Features
-    </a>
-    <a
+    <router-link
+      to="/#Brands"
       class="text-black md:text-[22px] max-md:text-lg font-normal font-['Roboto Slab'] cursor-pointer z-10 link"
-      href="#Brands"
       @click="closeMenu"
+      >Brands</router-link
     >
-      Brands
-    </a>
+
     <router-link
       to="/support"
       class="text-black md:text-[22px] max-md:text-lg font-normal font-['Roboto Slab'] cursor-pointer z-10 link"
+      @click="closeMenu"
       >Support</router-link
     >
   </div>

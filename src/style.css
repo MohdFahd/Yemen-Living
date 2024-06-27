@@ -16,6 +16,20 @@
   src: url("./assets/fonts/RobotoSlab-Medium.ttf") format("opentype");
   /* Corrected format */
 }
+@font-face {
+  font-family: "sansLms";
+  font-style: normal;
+  font-weight: 700;
+  src: url("./assets/fonts/Almarai-Light.ttf") format("opentype");
+  /* Corrected format */
+}
+@font-face {
+  font-family: "TheSansOffice-Bold_TRIAL";
+  font-style: normal;
+  font-weight: 700;
+  src: url("./assets/fonts/Almarai-Bold.ttf") format("opentype");
+  /* Corrected format */
+}
 body {
   font-family: "RobotoSlab-Light";
 }
@@ -27,4 +41,10 @@ body {
 }
 .link:hover {
   font-family: "RobotoSlab-Medium" !important;
+}
+.right {
+  font-family: "sansLms" !important;
+}
+.rightBold {
+  font-family: "TheSansOffice-Bold_TRIAL" !important;
 }
