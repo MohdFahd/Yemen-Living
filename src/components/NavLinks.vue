@@ -2,13 +2,11 @@
   <div
     class="flex justify-center items-center md:gap-10 max-md:gap-5 w-full max-md:flex-col"
   >
-    <a
-      href="#hero"
+    <router-link
+      to="/"
       class="text-black md:text-[22px] max-md:text-lg font-normal font-['Roboto Slab'] cursor-pointer z-10 link"
-      @click="closeMenu"
+      >Home</router-link
     >
-      Home
-    </a>
     <a
       class="text-black md:text-[22px] max-md:text-lg font-normal font-['Roboto Slab'] cursor-pointer z-10 link"
       href="#Features"
@@ -23,6 +21,11 @@
     >
       Brands
     </a>
+    <router-link
+      to="/support"
+      class="text-black md:text-[22px] max-md:text-lg font-normal font-['Roboto Slab'] cursor-pointer z-10 link"
+      >Support</router-link
+    >
   </div>
 </template>
 

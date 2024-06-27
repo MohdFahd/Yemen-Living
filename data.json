@@ -30,7 +30,11 @@
       "tap": "shipWorldwide"
     }
   ],
-  "Brands": [
+  "Brands":{
+
+  "title": "We works best with your favorite platform",
+  "subtitle": "Join over 4000 businesses worldwide",
+  "brandsImg": [
     {
        "name": "Samsung",
         "src": "assets/brands/1.png"
@@ -71,7 +75,8 @@
        "name": "Samsung",
         "src": "assets/brands/10.png"
     }
-  ],
+  ]
+  },
   "Downloads": [
     {
       "title": "Android",
