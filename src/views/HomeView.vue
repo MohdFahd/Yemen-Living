@@ -5,7 +5,7 @@ import Home from "../components/home.vue";
 import logo from "../components/logo.vue";
 import { useRouter } from "vue-router";
 
-const isLoading = ref(false);
+const isLoading = ref(true);
 const runAnimation = async () => {
   await nextTick(); // Ensure the DOM is fully rendered before starting animations
   const tl = gsap.timeline();
@@ -51,7 +51,7 @@ const resetAnimation = () => {
   isLoading.value = true;
 };
 onMounted(() => {
-  // runAnimation();
+  runAnimation();
 });
 const router = useRouter();
 
@@ -64,13 +64,13 @@ router.beforeEach((to, from, next) => {
 </script>
 
 <template>
-  <!-- <div
+  <div
     class="loader-wrap absolute z-30 h-screen w-full flex overflow-hidden items-center justify-center bg-transparent"
   >
     <svg
       viewBox="0 0 1000 1000"
       preserveAspectRatio="none"
-      class="svg fill-black opacity-95 absolute top-0 w-[100vw] h-[110vh] max-md:w-[200vw] max-md:ml-[-50vw]"
+      class="svg fill-black absolute top-0 w-[100vw] h-[110vh] max-md:w-[200vw] max-md:ml-[-50vw]"
     >
       <path id="svg" d="M0,1005S175,995,500,995s500,5,500,5V0H0Z"></path>
     </svg>
@@ -78,12 +78,12 @@ router.beforeEach((to, from, next) => {
     <div class="loader-wrap-heading">
       <span>
         <h1
-          class="relative text-3xl z-20 text-[#e0e0e0] uppercase flex justify-center items-center"
+          class="relative text-3xl z-20 uppercase flex justify-center items-center"
         >
           <logo logo="headerWhite" /></h1
       ></span>
     </div>
-  </div> -->
+  </div>
   <div class="overflow-hidden relative homepage" v-if="!isLoading">
     <Home />
   </div>
