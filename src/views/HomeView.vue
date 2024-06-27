@@ -5,7 +5,7 @@ import Home from "../components/home.vue";
 import logo from "../components/logo.vue";
 import { useRouter } from "vue-router";
 
-const isLoading = ref(true);
+const isLoading = ref(false);
 const runAnimation = async () => {
   await nextTick(); // Ensure the DOM is fully rendered before starting animations
   const tl = gsap.timeline();
@@ -51,7 +51,7 @@ const resetAnimation = () => {
   isLoading.value = true;
 };
 onMounted(() => {
-  runAnimation();
+  // runAnimation();
 });
 const router = useRouter();
 
@@ -64,7 +64,7 @@ router.beforeEach((to, from, next) => {
 </script>
 
 <template>
-  <div
+  <!-- <div
     class="loader-wrap absolute z-30 h-screen w-full flex overflow-hidden items-center justify-center bg-transparent"
   >
     <svg
@@ -83,7 +83,7 @@ router.beforeEach((to, from, next) => {
           <logo logo="headerWhite" /></h1
       ></span>
     </div>
-  </div>
+  </div> -->
   <div class="overflow-hidden relative homepage" v-if="!isLoading">
     <Home />
   </div>
