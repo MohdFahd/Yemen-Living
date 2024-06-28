@@ -1,7 +1,7 @@
 <template>
-  <div>
+  <div class="">
     <div
-      class="flex justify-between items-center mt-5 max-md:hidden container mx-auto px-10"
+      class="container mx-auto px-10 flex justify-between items-center mt-5 max-md:hidden"
       ref="container"
     >
       <a ref="logo" href="/Yemen-Living/">
