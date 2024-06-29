@@ -1,5 +1,5 @@
 <template>
-  <section id="Features" class="mt-5 bg-[#FDFDFD] cont p-10" ref="container">
+  <section id="Features" class="bg-[#FDFDFD] cont p-10" ref="container">
     <div class="container mx-auto px-10 max-md:px-5 py-5">
       <h1 class="bold text-center text-3xl max-md:text-xl" ref="title">
         Yemen Living Features

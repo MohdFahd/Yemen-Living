@@ -192,7 +192,7 @@
           </div>
         </div>
       </div>
-      <div class="absolute w-full my-5 -bottom-9 z-10">
+      <div class="absolute w-full my-5 -bottom-9 z-10 max-md:right-[50%]">
         <patten />
       </div>
     </section>

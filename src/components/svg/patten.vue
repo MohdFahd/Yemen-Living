@@ -1,11 +1,9 @@
 <template>
   <svg
-    width="100%"
-    height="100%"
     viewBox="0 0 1440 131"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
-    class=""
+    class="w-full h-full max-md:w-[400%]"
   >
     <g opacity="0.03" clip-path="url(#clip0_81_2475)">
       <path
